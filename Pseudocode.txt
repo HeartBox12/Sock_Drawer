@@ -1,0 +1,28 @@
+DECLARE EXPORTED Integer stepDistance
+DECLARE 2-dimensional Vector stepDir
+
+FUNCTION process(delta):
+	IF 'w' is pushed THEN
+		START wTimer
+	IF 's' is pushed THEN
+		START sTimer
+	[same for a and d.]
+
+	IF 'w' is released THEN
+		STOP wTimer
+	[same for s, a and d.]
+END FUNCTION(?)
+
+sTimer, wTimer, aTimer, and dTimer all call step()
+
+FUNCTION step():
+	IF w is pressed THEN
+		SET stepDir.y -= 1
+	IF s is pressed THEN
+		SET step.y += 1
+	IF a is pressed THEN
+	[...you get the point]
+
+	stepDir = stepDir, normalized
+
+	[Now, I just need to figure out the footstep sprite.]

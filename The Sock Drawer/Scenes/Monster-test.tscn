@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="CircleShape2D" id=1]
+
+[sub_resource type="OccluderPolygon2D" id=2]
+polygon = PoolVector2Array( 0, 10, 4, 9, 7, 7, 9, 4, 10, 0, 9, -4, 7, -7, 4, -9, 0, -10, -4, -9, -7, -7, -9, -4, -10, 0, -9, 4, -7, 7, -4, 9 )
+
+[node name="Monster1" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource( 2 )
