@@ -4,7 +4,7 @@
 [ext_resource path="res://Sprites/LightTextures/CircleSmallLight.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/LightTextures/GlowstickLight.png" type="Texture" id=3]
 
-[node name="WeaponEmmiter" type="Light2D"]
+[node name="WeaponEmitter" type="Light2D"]
 position = Vector2( -16.5, -19 )
 z_index = 1
 texture = ExtResource( 3 )
