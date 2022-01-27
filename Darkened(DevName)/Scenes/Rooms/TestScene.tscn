@@ -69,7 +69,7 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="Player" type="KinematicBody2D" parent="YSort"]
 light_mask = 2
-position = Vector2( 118, 249 )
+position = Vector2( 99.5, 243.5 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
