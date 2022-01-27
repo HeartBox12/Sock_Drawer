@@ -12,6 +12,7 @@ height = 8.0
 
 [node name="Player" type="KinematicBody2D"]
 light_mask = 2
+scale = Vector2( 2, 2 )
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true

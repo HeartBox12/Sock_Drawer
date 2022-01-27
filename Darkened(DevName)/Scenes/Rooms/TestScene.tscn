@@ -1,61 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Instances/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Instances/ThrownWeapon.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Sprites/Tilesets/Box.png" type="Texture" id=3]
-
-[sub_resource type="OccluderPolygon2D" id=1]
-polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=4]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="TileSet" id=3]
-0/name = "Box.png 0"
-0/texture = ExtResource( 3 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 32, 32 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-1/name = "Box.png 1"
-1/texture = ExtResource( 3 )
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 0, 32, 32, 32 )
-1/tile_mode = 0
-1/occluder_offset = Vector2( 0, 0 )
-1/occluder = SubResource( 1 )
-1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 4 )
-1/shape_one_way = false
-1/shape_one_way_margin = 1.0
-1/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 4 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-1/z_index = 0
-
-[sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 112, 24 )
-
-[sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 112, 23.75 )
+[ext_resource path="res://Tilesets/TestTileset.tres" type="TileSet" id=3]
 
 [node name="TestScene" type="Node2D"]
-scale = Vector2( 2, 2 )
 
 [node name="MakeEverythingDark" type="CanvasModulate" parent="."]
 position = Vector2( 363, 313 )
@@ -65,7 +14,8 @@ color = Color( 0, 0, 0, 1 )
 [node name="YSort" type="YSort" parent="."]
 
 [node name="TestTiles" type="TileMap" parent="YSort"]
-tile_set = SubResource( 3 )
+scale = Vector2( 2, 2 )
+tile_set = ExtResource( 3 )
 cell_size = Vector2( 32, 32 )
 cell_tile_origin = 2
 cell_y_sort = true
@@ -75,21 +25,5 @@ tile_data = PoolIntArray( 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 365.5, 157 )
 
-[node name="TestCollider" type="StaticBody2D" parent="."]
-light_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestCollider"]
-light_mask = 0
-position = Vector2( 208, 104 )
-shape = SubResource( 5 )
-
-[node name="testLight" parent="." instance=ExtResource( 2 )]
+[node name="testLight" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 104, 137.5 )
-
-[node name="TestCollider2" type="StaticBody2D" parent="."]
-light_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestCollider2"]
-light_mask = 0
-position = Vector2( 208, 199.75 )
-shape = SubResource( 6 )

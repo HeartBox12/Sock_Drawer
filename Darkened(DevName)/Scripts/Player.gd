@@ -4,7 +4,7 @@ var inputDir = Vector2.ZERO
 const SPEED = 200
 var aiming = false
 
-onready var glowThrow = preload("res://scenes/instances/ThrownWeapon.tscn")
+onready var glowThrow = preload("res://Scenes/Instances/ThrownWeapon.tscn")
 
 func _process(delta):
 	# Variable speed determination for controls
