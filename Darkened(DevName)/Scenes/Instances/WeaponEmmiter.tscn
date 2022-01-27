@@ -5,7 +5,6 @@
 [ext_resource path="res://Sprites/LightTextures/GlowstickLight.png" type="Texture" id=3]
 
 [node name="WeaponEmitter" type="Light2D"]
-position = Vector2( -16.5, -19 )
 z_index = 1
 texture = ExtResource( 3 )
 mode = 2
