@@ -1,14 +1,10 @@
 extends RigidBody2D
 
-func _ready():
-	pass
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+#func _ready():
+#	pass
 	
-	#FIXME: add bounce functionality, so as to bounce off monsters and walls.
+#func _process(delta):
+#	pass
 
 
 func _on_lifespan_over():
