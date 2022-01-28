@@ -43,4 +43,5 @@ rotation = 1.5708
 shape = SubResource( 5 )
 
 [node name="RotateAround" parent="." instance=ExtResource( 6 )]
+visible = false
 position = Vector2( -18, -16 )

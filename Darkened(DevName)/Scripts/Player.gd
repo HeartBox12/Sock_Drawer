@@ -25,11 +25,11 @@ func _process(delta):
 		stop_aim()
 
 func begin_aim():
-	pass #FIXME: Make the reticle visible, once we have one
-	print("Should have worked")
+	$RotateAround.visible = true
 	
 func stop_aim():
 	print("Should have worked")
+	$RotateAround.visible = false
 	
 	var newGlowThrow = glowThrow.instance()
 	get_parent().add_child(newGlowThrow)
