@@ -3,7 +3,6 @@ extends KinematicBody2D
 var inputDir = Vector2.ZERO
 const SPEED = 200
 var aiming = false
-var collision
 
 onready var glowThrow = preload("res://Scenes/Instances/ThrownWeapon.tscn")
 
@@ -23,14 +22,6 @@ func _process(delta):
 	if aiming and !Input.is_mouse_button_pressed(1): #player has released M1
 		aiming = false
 		stop_aim()
-		
-	var slideCount = get_slide_count()
-	print(slideCount)
-	
-	if slideCount > 0:
-		if get_slide_collision(slideCount - 1).collider.is_in_group("Walls"):
-			print("Hit a wall")
-	
 
 func begin_aim():
 	$WeaponEmitter/RotateAround.visible = true
