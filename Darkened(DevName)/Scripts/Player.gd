@@ -21,7 +21,6 @@ func _process(delta):
 		
 	if aiming and !Input.is_mouse_button_pressed(1): #player has released M1
 		aiming = false
-		
 		stop_aim()
 
 func begin_aim():
