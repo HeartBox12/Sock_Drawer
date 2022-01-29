@@ -12,7 +12,7 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="YSort" type="YSort" parent="."]
 
-[node name="TestTiles" type="TileMap" parent="YSort"]
+[node name="TestTiles" type="TileMap" parent="YSort" groups=["Walls"]]
 scale = Vector2( 2, 2 )
 tile_set = ExtResource( 3 )
 cell_size = Vector2( 32, 32 )
