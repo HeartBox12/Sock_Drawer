@@ -24,13 +24,13 @@ func _process(delta):
 		stop_aim()
 
 func begin_aim():
-	$RotateAround.visible = true
+	$WeaponEmitter/RotateAround.visible = true
 	
 func stop_aim():
 	print("Should have worked")
-	$RotateAround.visible = false
+	$WeaponEmitter/RotateAround.visible = false
 	
 	var newGlowThrow = glowThrow.instance()
 	get_parent().add_child(newGlowThrow)
-	newGlowThrow.position = position
-	newGlowThrow.linear_velocity = get_local_mouse_position().normalized() * 1000
+	newGlowThrow.position = position + ($WeaponEmitter.position * 2)
+	newGlowThrow.linear_velocity = $WeaponEmitter.get_local_mouse_position().normalized() * 1000

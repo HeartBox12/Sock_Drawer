@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Sprites/LightTextures/PlayerVisibleLight.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/LightTextures/SelfLight.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/BoySprite.png" type="Texture" id=3]
-[ext_resource path="res://Scenes/Instances/WeaponEmmiter.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Instances/WeaponEmitter.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=5]
-[ext_resource path="res://Scenes/Instances/Reticle.tscn" type="PackedScene" id=6]
 
 [sub_resource type="CapsuleShape2D" id=5]
 radius = 10.5
@@ -35,13 +34,9 @@ visible = false
 position = Vector2( -5.5, 12.5 )
 texture = ExtResource( 2 )
 
-[node name="WeaponEmmiter" parent="." instance=ExtResource( 4 )]
+[node name="WeaponEmitter" parent="." instance=ExtResource( 4 )]
 position = Vector2( -18, -16 )
 
 [node name="CollwithEnvior" type="CollisionShape2D" parent="."]
 rotation = 1.5708
 shape = SubResource( 5 )
-
-[node name="RotateAround" parent="." instance=ExtResource( 6 )]
-visible = false
-position = Vector2( -18, -16 )
