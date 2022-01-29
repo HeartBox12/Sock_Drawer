@@ -1,7 +1,24 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Sprites/icon.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/ArrowSpritesheet.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Reticle.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Sketchy"
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
 
 [node name="RotateAround" type="Position2D"]
 script = ExtResource( 2 )
@@ -10,5 +27,14 @@ __meta__ = {
 }
 
 [node name="Reticle" type="Sprite" parent="."]
-position = Vector2( 67, 0 )
+position = Vector2( 39, 0 )
+rotation = 1.57079
+z_index = 1
 texture = ExtResource( 1 )
+hframes = 3
+frame = 2
+
+[node name="SketchyEffect" type="AnimationPlayer" parent="Reticle"]
+reset_on_save = false
+method_call_mode = 1
+anims/Sketchy = SubResource( 1 )
