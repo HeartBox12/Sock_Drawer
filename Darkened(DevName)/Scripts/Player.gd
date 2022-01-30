@@ -3,6 +3,7 @@ extends KinematicBody2D
 var inputDir = Vector2.ZERO
 const SPEED = 200
 var aiming = false
+var idleDir = "South Idle On"
 
 onready var glowThrow = preload("res://Scenes/Instances/ThrownWeapon.tscn")
 
@@ -12,6 +13,7 @@ func _process(delta):
 	inputDir.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	
 	inputDir = inputDir.normalized() # Makes sure player moves same speed in all directions
+	
 	
 	move_and_slide(inputDir * SPEED)
 	
@@ -33,3 +35,17 @@ func stop_aim():
 	get_parent().add_child(newGlowThrow)
 	newGlowThrow.position = position + ($WeaponEmitter.position * 2)
 	newGlowThrow.linear_velocity = $WeaponEmitter.get_local_mouse_position().normalized() * 1000
+	
+func _unhandled_key_input(event):
+	
+	if event.is_action_pressed("ui_down"):
+		$AnimatedSprite.animation = "South Walk On"
+		idleDir = "South Idle On"
+	elif event.is_action_pressed("ui_up"):
+		pass
+	elif event.is_action_pressed("ui_left"):
+		idleDir = "Left Idle On"
+	elif event.is_action_pressed("ui_right"):
+		pass
+	else:
+		$AnimatedSprite.animation = idleDir
