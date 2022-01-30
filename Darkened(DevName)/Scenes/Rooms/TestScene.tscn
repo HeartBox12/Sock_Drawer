@@ -48,7 +48,7 @@ cell_y_sort = true
 collision_layer = 0
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( 1, 6, 0, 2, 7, 0, 3, 7, 0, 4, 7, 0, 5, 2, 0, 65537, 3, 0, 65538, 9, 0, 65539, 9, 0, 65540, 9, 0, 65541, 10, 0, 131073, 12, 0 )
+tile_data = PoolIntArray( 1, 6, 0, 2, 7, 0, 3, 7, 0, 4, 7, 0, 5, 2, 0, 65537, 3, 0, 65538, 9, 0, 65539, 9, 0, 65540, 9, 0, 65541, 10, 0, 131073, 12, 0, 196620, 0, 0, 262156, 8, 0, 327692, 12, 0 )
 
 [node name="TestTilesDecorative" type="TileMap" parent="YSort"]
 scale = Vector2( 2, 2 )
@@ -67,7 +67,7 @@ cell_size = Vector2( 32, 32 )
 collision_layer = 3
 collision_mask = 3
 format = 1
-tile_data = PoolIntArray( 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 131073, 0, 0 )
+tile_data = PoolIntArray( 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 131073, 0, 0, 327692, 0, 0 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 724, 340 )

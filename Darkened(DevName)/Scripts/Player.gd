@@ -24,6 +24,23 @@ func _process(delta):
 	if aiming and !Input.is_mouse_button_pressed(1): #player has released M1
 		aiming = false
 		stop_aim()
+		
+	if Input.is_action_pressed("ui_down"):
+		$PlayerAnimation.play("South Walk On")
+		idleDir = "South Idle On"
+		
+	elif Input.is_action_pressed("ui_up"):
+		pass
+		
+	elif Input.is_action_pressed("ui_left"):
+		$PlayerAnimation.play("Left Idle On")
+		idleDir = "Left Idle On"
+		
+	elif Input.is_action_pressed("ui_right"):
+		pass
+		
+	else:
+		$PlayerAnimation.play(idleDir)
 
 func begin_aim():
 	$WeaponEmitter/RotateAround.visible = true
@@ -35,17 +52,3 @@ func stop_aim():
 	get_parent().add_child(newGlowThrow)
 	newGlowThrow.position = position + ($WeaponEmitter.position * 2)
 	newGlowThrow.linear_velocity = $WeaponEmitter.get_local_mouse_position().normalized() * 1000
-	
-func _unhandled_key_input(event):
-	
-	if event.is_action_pressed("ui_down"):
-		$AnimatedSprite.animation = "South Walk On"
-		idleDir = "South Idle On"
-	elif event.is_action_pressed("ui_up"):
-		pass
-	elif event.is_action_pressed("ui_left"):
-		idleDir = "Left Idle On"
-	elif event.is_action_pressed("ui_right"):
-		pass
-	else:
-		$AnimatedSprite.animation = idleDir

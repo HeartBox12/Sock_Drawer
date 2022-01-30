@@ -1,169 +1,322 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Sprites/LightTextures/PlayerVisibleLight.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/LightTextures/SelfLight.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/BoySprite.png" type="Texture" id=3]
-[ext_resource path="res://Scenes/Instances/WeaponEmitter.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sprites/Spritesheets/PlayerSpritesheet.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/LightTextures/GlowstickLight.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=5]
-[ext_resource path="res://Sprites/Spritesheets/IdleOff.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Spritesheets/IdleOn.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Spritesheets/WalkSouthOn.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Spritesheets/WalkSouthOff.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Spritesheets/LeftIdleOn.png" type="Texture" id=10]
-
-[sub_resource type="AtlasTexture" id=27]
-atlas = ExtResource( 10 )
-region = Rect2( 0, 0, 67, 69 )
-
-[sub_resource type="AtlasTexture" id=28]
-atlas = ExtResource( 10 )
-region = Rect2( 67, 0, 67, 69 )
-
-[sub_resource type="AtlasTexture" id=29]
-atlas = ExtResource( 10 )
-region = Rect2( 134, 0, 67, 69 )
-
-[sub_resource type="AtlasTexture" id=30]
-atlas = ExtResource( 10 )
-region = Rect2( 201, 0, 67, 69 )
-
-[sub_resource type="AtlasTexture" id=31]
-atlas = ExtResource( 10 )
-region = Rect2( 268, 0, 67, 69 )
-
-[sub_resource type="AtlasTexture" id=21]
-atlas = ExtResource( 6 )
-region = Rect2( 0, 0, 67, 69 )
-
-[sub_resource type="AtlasTexture" id=22]
-atlas = ExtResource( 6 )
-region = Rect2( 67, 0, 67, 69 )
-
-[sub_resource type="AtlasTexture" id=23]
-atlas = ExtResource( 6 )
-region = Rect2( 134, 0, 67, 69 )
-
-[sub_resource type="AtlasTexture" id=24]
-atlas = ExtResource( 6 )
-region = Rect2( 201, 0, 67, 69 )
-
-[sub_resource type="AtlasTexture" id=25]
-atlas = ExtResource( 6 )
-region = Rect2( 268, 0, 67, 69 )
-
-[sub_resource type="AtlasTexture" id=16]
-atlas = ExtResource( 7 )
-region = Rect2( 0, 0, 67, 69 )
-
-[sub_resource type="AtlasTexture" id=17]
-atlas = ExtResource( 7 )
-region = Rect2( 67, 0, 67, 69 )
-
-[sub_resource type="AtlasTexture" id=18]
-atlas = ExtResource( 7 )
-region = Rect2( 134, 0, 67, 69 )
-
-[sub_resource type="AtlasTexture" id=19]
-atlas = ExtResource( 7 )
-region = Rect2( 201, 0, 67, 69 )
-
-[sub_resource type="AtlasTexture" id=20]
-atlas = ExtResource( 7 )
-region = Rect2( 268, 0, 67, 69 )
-
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 9 )
-region = Rect2( 0, 0, 67, 69 )
-
-[sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 9 )
-region = Rect2( 67, 0, 67, 69 )
-
-[sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 9 )
-region = Rect2( 134, 0, 67, 69 )
-
-[sub_resource type="AtlasTexture" id=9]
-atlas = ExtResource( 9 )
-region = Rect2( 201, 0, 67, 69 )
-
-[sub_resource type="AtlasTexture" id=10]
-atlas = ExtResource( 9 )
-region = Rect2( 268, 0, 67, 69 )
-
-[sub_resource type="AtlasTexture" id=11]
-atlas = ExtResource( 8 )
-region = Rect2( 0, 0, 67, 69 )
-
-[sub_resource type="AtlasTexture" id=12]
-atlas = ExtResource( 8 )
-region = Rect2( 67, 0, 67, 69 )
-
-[sub_resource type="AtlasTexture" id=13]
-atlas = ExtResource( 8 )
-region = Rect2( 134, 0, 67, 69 )
-
-[sub_resource type="AtlasTexture" id=14]
-atlas = ExtResource( 8 )
-region = Rect2( 201, 0, 67, 69 )
-
-[sub_resource type="AtlasTexture" id=15]
-atlas = ExtResource( 8 )
-region = Rect2( 268, 0, 67, 69 )
-
-[sub_resource type="SpriteFrames" id=26]
-animations = [ {
-"frames": [ SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ) ],
-"loop": true,
-"name": "Left Idle On",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ) ],
-"loop": true,
-"name": "South Idle Off",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
-"loop": true,
-"name": "South Idle On",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
-"loop": true,
-"name": "South Walk Off",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
-"loop": true,
-"name": "South Walk On",
-"speed": 5.0
-} ]
+[ext_resource path="res://Scenes/Instances/Reticle.tscn" type="PackedScene" id=6]
 
 [sub_resource type="CapsuleShape2D" id=5]
 radius = 10.5
 height = 8.0
 
+[sub_resource type="Animation" id=9]
+resource_name = "Left Idle Off"
+length = 0.833333
+loop = true
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("WeaponEmitter:texture_scale")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.01 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.166667, 0.333333, 0.5, 0.666667 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 20, 21, 22, 23, 24 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("WeaponEmitter:position")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -9.5, -13 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "Left Idle On"
+length = 0.833333
+loop = true
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("WeaponEmitter:texture_scale")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.166667, 0.333333, 0.5, 0.666667 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 30, 31, 32, 33, 34 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("WeaponEmitter:position")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -9.5, -13 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 10 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("WeaponEmitter:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -9.5, -13 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("WeaponEmitter:texture_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.01 ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "South Idle Off"
+length = 0.833333
+loop = true
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.166667, 0.333333, 0.5, 0.666667 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("WeaponEmitter:position")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -13.5 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("WeaponEmitter:texture_scale")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.01 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "South Idle On"
+length = 0.833333
+loop = true
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("WeaponEmitter:texture_scale")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.166667, 0.333333, 0.5, 0.666667 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 10, 11, 12, 13, 14 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("WeaponEmitter:position")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -13.5 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "South Walk Off"
+length = 0.833333
+loop = true
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.166667, 0.333333, 0.5, 0.666667 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 5, 6, 7, 8, 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("WeaponEmitter:texture_scale")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.01 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("WeaponEmitter:position")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -13.5 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "South Walk On"
+length = 0.833333
+loop = true
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("WeaponEmitter:texture_scale")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.166667, 0.333333, 0.5, 0.666667 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 15, 16, 17, 18, 19 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("WeaponEmitter:position")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -13.5 ) ]
+}
+
 [node name="Player" type="KinematicBody2D"]
 light_mask = 2
 scale = Vector2( 2, 2 )
 script = ExtResource( 5 )
+
+[node name="PlayerSprite" type="Sprite" parent="."]
+light_mask = 2
+position = Vector2( 0.5, -30 )
+texture = ExtResource( 3 )
+hframes = 5
+vframes = 7
+frame = 10
 __meta__ = {
 "_edit_group_": true
 }
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-light_mask = 2
-frames = SubResource( 26 )
-animation = "South Idle Off"
-frame = 4
-playing = true
-offset = Vector2( 1, -31 )
-
-[node name="PlayerSprite" type="Sprite" parent="."]
-visible = false
-light_mask = 2
-position = Vector2( 5.5, -28.5 )
-texture = ExtResource( 3 )
 
 [node name="KeepPlayerVisible" type="Light2D" parent="PlayerSprite"]
 position = Vector2( -3, 1.5 )
@@ -176,9 +329,29 @@ visible = false
 position = Vector2( -5.5, 12.5 )
 texture = ExtResource( 2 )
 
-[node name="WeaponEmitter" parent="." instance=ExtResource( 4 )]
-position = Vector2( -18, -16 )
+[node name="WeaponEmitter" type="Light2D" parent="."]
+position = Vector2( -9.5, -13 )
+z_index = 1
+texture = ExtResource( 4 )
+texture_scale = 0.01
+mode = 2
+shadow_color = Color( 1, 0.984314, 0, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="RotateAround" parent="WeaponEmitter" instance=ExtResource( 6 )]
+visible = false
 
 [node name="CollwithEnvior" type="CollisionShape2D" parent="."]
 rotation = 1.5708
 shape = SubResource( 5 )
+
+[node name="PlayerAnimation" type="AnimationPlayer" parent="."]
+"anims/Left Idle Off" = SubResource( 9 )
+"anims/Left Idle On" = SubResource( 10 )
+anims/RESET = SubResource( 7 )
+"anims/South Idle Off" = SubResource( 11 )
+"anims/South Idle On" = SubResource( 8 )
+"anims/South Walk Off" = SubResource( 12 )
+"anims/South Walk On" = SubResource( 6 )
