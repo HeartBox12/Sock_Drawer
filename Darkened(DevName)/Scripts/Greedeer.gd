@@ -18,4 +18,7 @@ func _ready():
 
 
 func _on_found(area_rid, area, area_shape_index, local_shape_index):
-	pass # Replace with function body.
+	if area.is_in_group("Lights"):
+		$IdleSprite.visible = false
+		$ActiveSprite.visible = true
+	#FIXME: If area is in group "Lights", switch to active state.

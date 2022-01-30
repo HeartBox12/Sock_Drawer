@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Sprites/TestGreedeerIdle.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/TestGreedeerActive.png" type="Texture" id=2]
@@ -7,7 +7,11 @@
 [sub_resource type="CapsuleShape2D" id=1]
 height = 34.0
 
-[node name="Greedeer" type="KinematicBody2D"]
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 42.0
+height = 36.0
+
+[node name="Greedeer" type="KinematicBody2D" groups=["Monsters"]]
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -25,3 +29,11 @@ __meta__ = {
 visible = false
 position = Vector2( 0, -56 )
 texture = ExtResource( 2 )
+
+[node name="Detect Light" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detect Light"]
+position = Vector2( 14, -51 )
+shape = SubResource( 2 )
+
+[connection signal="area_shape_entered" from="Detect Light" to="." method="_on_found"]
