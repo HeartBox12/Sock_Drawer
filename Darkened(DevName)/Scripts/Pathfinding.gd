@@ -1,6 +1,7 @@
 extends Navigation2D
 
 var path:PoolVector2Array
+var i = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,6 +15,8 @@ func _ready():
 
 func _unhandled_key_input(event):
 	if !event.echo:
-		path = get_simple_path($YSort/Greedeer.position, $YSort/Player.position)
-		$YSort/Greedeer.move_and_slide(path[0])
-		$YSort/Greedeer/Line2D.points = path
+		path = get_simple_path($YSort/Greedeer.global_position, $YSort/Player.global_position)
+		$YSort/Greedeer.move_and_slide(path[1] - path [0])
+		$Line2D.points = path
+		print("Path = ", path)
+	

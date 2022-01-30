@@ -7,7 +7,7 @@ var idleDir = "South Idle On"
 
 onready var glowThrow = preload("res://Scenes/Instances/ThrownWeapon.tscn")
 
-func _process(delta):
+func _process(_delta):
 	# Variable speed determination for controls
 	inputDir.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	inputDir.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")

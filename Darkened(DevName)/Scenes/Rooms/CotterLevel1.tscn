@@ -50,6 +50,27 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 1/shape_one_way_margin = 0.0
 1/shapes = [  ]
 1/z_index = 0
+2/name = "CollideTileset.png 2"
+2/texture = ExtResource( 2 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 32, 32 )
+2/tile_mode = 2
+2/autotile/icon_coordinate = Vector2( 0, 0 )
+2/autotile/tile_size = Vector2( 32, 32 )
+2/autotile/spacing = 0
+2/autotile/occluder_map = [  ]
+2/autotile/navpoly_map = [  ]
+2/autotile/priority_map = [  ]
+2/autotile/z_index_map = [  ]
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
 
 [node name="TestScene" type="Node2D"]
 
@@ -81,9 +102,6 @@ tile_data = PoolIntArray( 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65
 [node name="Greedeer" parent="Navigation2D/YSort" instance=ExtResource( 4 )]
 position = Vector2( 112, 404 )
 
-[node name="Line2D" type="Line2D" parent="Navigation2D/YSort/Greedeer"]
-position = Vector2( -547, -209 )
-
 [node name="TestTilesFunctional" type="TileMap" parent="Navigation2D/YSort"]
 position = Vector2( 0, 12 )
 scale = Vector2( 2, 2 )
@@ -107,3 +125,6 @@ tile_data = PoolIntArray( 327685, 28, 0, 393221, 20, 0, 458757, 28, 0, 524293, 2
 
 [node name="Player" parent="Navigation2D/YSort" instance=ExtResource( 1 )]
 position = Vector2( 832, 299 )
+
+[node name="Line2D" type="Line2D" parent="Navigation2D"]
+position = Vector2( -435, 195 )
