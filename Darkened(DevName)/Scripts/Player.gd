@@ -27,7 +27,6 @@ func begin_aim():
 	$WeaponEmitter/RotateAround.visible = true
 	
 func stop_aim():
-	print("Should have worked")
 	$WeaponEmitter/RotateAround.visible = false
 	
 	var newGlowThrow = glowThrow.instance()
