@@ -36,4 +36,6 @@ texture = ExtResource( 2 )
 position = Vector2( 14, -51 )
 shape = SubResource( 2 )
 
+[node name="Navigation2D" type="Navigation2D" parent="."]
+
 [connection signal="area_shape_entered" from="Detect Light" to="." method="_on_found"]
