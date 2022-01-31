@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Sprites/TestGreedeerIdle.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/TestGreedeerActive.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/Greedeer.gd" type="Script" id=3]
+[ext_resource path="res://Sounds/Creature_1_Call.wav" type="AudioStream" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 height = 34.0
@@ -30,12 +31,16 @@ visible = false
 position = Vector2( 0, -56 )
 texture = ExtResource( 2 )
 
-[node name="Detect Light" type="Area2D" parent="."]
+[node name="DetectLight" type="Area2D" parent="."]
+monitoring = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Detect Light"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectLight"]
 position = Vector2( 14, -51 )
 shape = SubResource( 2 )
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
 
-[connection signal="area_shape_entered" from="Detect Light" to="." method="_on_found"]
+[node name="ActivateNoise" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+
+[connection signal="area_shape_entered" from="DetectLight" to="." method="_on_found"]

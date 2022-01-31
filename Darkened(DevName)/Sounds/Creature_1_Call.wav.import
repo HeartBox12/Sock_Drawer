@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Creature_1_Call.wav-ccdad659d4bcc2b15224ff9aa22a4253.sample"
+
+[deps]
+
+source_file="res://Sounds/Creature_1_Call.wav"
+dest_files=[ "res://.import/Creature_1_Call.wav-ccdad659d4bcc2b15224ff9aa22a4253.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

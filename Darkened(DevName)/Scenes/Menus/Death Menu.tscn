@@ -4,7 +4,7 @@
 [ext_resource path="res://UI/MainTheme.tres" type="Theme" id=2]
 [ext_resource path="res://Fonts/FlashForward.tres" type="DynamicFont" id=3]
 
-[node name="Menu" type="Control"]
+[node name="Menu2" type="Control"]
 theme = ExtResource( 2 )
 script = ExtResource( 1 )
 __meta__ = {
