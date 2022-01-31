@@ -16,6 +16,10 @@ config/description="You are the last of humanity after the sun goes out.
 run/main_scene="res://Scenes/Rooms/Menu.tscn"
 config/icon="res://Sprites/DarkenedIcon.png"
 
+[autoload]
+
+GameEvents="*res://Scripts/game_events.gd"
+
 [display]
 
 window/size/resizable=false
@@ -26,6 +30,8 @@ window/stretch/aspect="keep"
 
 windoew=false
 window=false
+auto=false
+autoload=true
 
 [importer_defaults]
 
