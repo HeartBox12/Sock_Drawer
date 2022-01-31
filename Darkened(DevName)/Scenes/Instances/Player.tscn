@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Sprites/LightTextures/PlayerVisibleLight.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/LightTextures/SelfLight.png" type="Texture" id=2]
@@ -10,6 +10,48 @@
 [sub_resource type="CapsuleShape2D" id=5]
 radius = 10.5
 height = 8.0
+
+[sub_resource type="Animation" id=23]
+resource_name = "Cry"
+length = 0.833333
+loop = true
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.166667, 0.333333, 0.5, 0.666667 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 84, 85, 86, 87, 88 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("WeaponEmitter:texture_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("WeaponEmitter:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -13.5 ) ]
+}
 
 [sub_resource type="Animation" id=9]
 resource_name = "Left Idle Off"
@@ -35,10 +77,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.166667, 0.333333, 0.5, 0.666667 ),
+"times": PoolRealArray( 0, 0.166667, 0.333334, 0.500001, 0.666668 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 20, 21, 22, 23, 24 ]
+"values": [ 24, 25, 26, 27, 28 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("WeaponEmitter:position")
@@ -77,10 +119,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.166667, 0.333333, 0.5, 0.666667 ),
+"times": PoolRealArray( 0, 0.166667, 0.333334, 0.500001, 0.666668 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 30, 31, 32, 33, 34 ]
+"values": [ 36, 37, 38, 39, 40 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("WeaponEmitter:position")
@@ -93,6 +135,258 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( -9.5, -13 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "Left Walk Off"
+length = 1.0
+loop = true
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("WeaponEmitter:texture_scale")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.01 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.166667, 0.333334, 0.500001, 0.666668, 0.833335 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 30, 31, 32, 33, 34, 35 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("WeaponEmitter:position")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -9.5, -13 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "Left Walk On"
+length = 1.0
+loop = true
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("WeaponEmitter:texture_scale")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.166667, 0.333334, 0.500001, 0.666668, 0.833335 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 42, 43, 44, 45, 46, 47 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("WeaponEmitter:position")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -9.5, -13 ) ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "North Idle Off"
+length = 0.833333
+loop = true
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.166667, 0.333334, 0.500001, 0.666668 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 72, 73, 74, 75, 76 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("WeaponEmitter:position")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -25.5 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("WeaponEmitter:texture_scale")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.01 ]
+}
+
+[sub_resource type="Animation" id=21]
+resource_name = "North Idle On"
+length = 0.833333
+loop = true
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("WeaponEmitter:position")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -25.5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("WeaponEmitter:texture_scale")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("PlayerSprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.166667, 0.333334, 0.500001, 0.666668 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 72, 73, 74, 75, 76 ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "North Walk Off"
+length = 0.833333
+loop = true
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.166667, 0.333334, 0.500001, 0.666668 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 78, 79, 80, 81, 82 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("WeaponEmitter:position")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -25.5 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("WeaponEmitter:texture_scale")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.01 ]
+}
+
+[sub_resource type="Animation" id=22]
+resource_name = "North Walk On"
+length = 0.833333
+loop = true
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.166667, 0.333334, 0.500001, 0.666668 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 78, 79, 80, 81, 82 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("WeaponEmitter:position")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -25.5 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("WeaponEmitter:texture_scale")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -132,6 +426,174 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.01 ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "Right Idle Off"
+length = 0.833333
+loop = true
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("WeaponEmitter:texture_scale")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.01 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.166667, 0.333334, 0.500001, 0.666668 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 48, 49, 50, 51, 52 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("WeaponEmitter:position")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 10, -13.5 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "Right Idle On"
+length = 0.833333
+loop = true
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("WeaponEmitter:texture_scale")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.166667, 0.333334, 0.500001, 0.666668 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 60, 61, 62, 63, 64 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("WeaponEmitter:position")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 10, -13.5 ) ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "Right Walk Off"
+length = 1.0
+loop = true
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("WeaponEmitter:texture_scale")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.01 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.166667, 0.333334, 0.500001, 0.666668, 0.833335 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 54, 55, 56, 57, 58, 59 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("WeaponEmitter:position")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 10, -13.5 ) ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "Right Walk On"
+length = 1.0
+loop = true
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("WeaponEmitter:texture_scale")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.166667, 0.333334, 0.500001, 0.666668, 0.833335 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 66, 67, 68, 69, 70, 71 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("WeaponEmitter:position")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 10, -13.5 ) ]
 }
 
 [sub_resource type="Animation" id=11]
@@ -200,10 +662,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.166667, 0.333333, 0.5, 0.666667 ),
+"times": PoolRealArray( 0, 0.166667, 0.333334, 0.500001, 0.666668 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 10, 11, 12, 13, 14 ]
+"values": [ 12, 13, 14, 15, 16 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("WeaponEmitter:position")
@@ -230,10 +692,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.166667, 0.333333, 0.5, 0.666667 ),
+"times": PoolRealArray( 0, 0.166667, 0.333334, 0.500001, 0.666668 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 5, 6, 7, 8, 9 ]
+"values": [ 6, 7, 8, 9, 10 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("WeaponEmitter:texture_scale")
@@ -284,10 +746,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.166667, 0.333333, 0.5, 0.666667 ),
+"times": PoolRealArray( 0, 0.166667, 0.333334, 0.500001, 0.666668 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 15, 16, 17, 18, 19 ]
+"values": [ 18, 19, 20, 21, 22 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("WeaponEmitter:position")
@@ -311,12 +773,9 @@ script = ExtResource( 5 )
 light_mask = 2
 position = Vector2( 0.5, -30 )
 texture = ExtResource( 3 )
-hframes = 5
-vframes = 7
+hframes = 6
+vframes = 15
 frame = 10
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="KeepPlayerVisible" type="Light2D" parent="PlayerSprite"]
 position = Vector2( -3, 1.5 )
@@ -326,8 +785,9 @@ range_item_cull_mask = 2
 
 [node name="PlayerEmitter" type="Light2D" parent="PlayerSprite"]
 visible = false
-position = Vector2( -5.5, 12.5 )
+position = Vector2( -0.5, 30 )
 texture = ExtResource( 2 )
+texture_scale = 0.5
 
 [node name="WeaponEmitter" type="Light2D" parent="."]
 position = Vector2( -9.5, -13 )
@@ -348,10 +808,26 @@ rotation = 1.5708
 shape = SubResource( 5 )
 
 [node name="PlayerAnimation" type="AnimationPlayer" parent="."]
+anims/Cry = SubResource( 23 )
 "anims/Left Idle Off" = SubResource( 9 )
 "anims/Left Idle On" = SubResource( 10 )
+"anims/Left Walk Off" = SubResource( 13 )
+"anims/Left Walk On" = SubResource( 14 )
+"anims/North Idle Off" = SubResource( 19 )
+"anims/North Idle On" = SubResource( 21 )
+"anims/North Walk Off" = SubResource( 20 )
+"anims/North Walk On" = SubResource( 22 )
 anims/RESET = SubResource( 7 )
+"anims/Right Idle Off" = SubResource( 15 )
+"anims/Right Idle On" = SubResource( 16 )
+"anims/Right Walk Off" = SubResource( 17 )
+"anims/Right Walk On" = SubResource( 18 )
 "anims/South Idle Off" = SubResource( 11 )
 "anims/South Idle On" = SubResource( 8 )
 "anims/South Walk Off" = SubResource( 12 )
 "anims/South Walk On" = SubResource( 6 )
+
+[node name="FootstepTime" type="Timer" parent="."]
+wait_time = 0.25
+
+[connection signal="timeout" from="FootstepTime" to="." method="_on_Footstepped"]
