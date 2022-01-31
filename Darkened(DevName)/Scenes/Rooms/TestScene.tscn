@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/Instances/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/TilesetAssets/CollideTileset.png" type="Texture" id=2]
 [ext_resource path="res://Tilesets/TestTileset.tres" type="TileSet" id=3]
 [ext_resource path="res://Scenes/Instances/Greedeer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Instances/Roomlight.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/LoadMusic.gd" type="Script" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -32,6 +34,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 0/z_index = 0
 
 [node name="TestScene" type="Node2D"]
+script = ExtResource( 6 )
 
 [node name="MakeEverythingDark" type="CanvasModulate" parent="."]
 position = Vector2( 363, 313 )
@@ -75,3 +78,5 @@ position = Vector2( 724, 340 )
 
 [node name="Greedeer" parent="." instance=ExtResource( 4 )]
 position = Vector2( 402, 340 )
+
+[node name="Roomlight" parent="." instance=ExtResource( 5 )]
