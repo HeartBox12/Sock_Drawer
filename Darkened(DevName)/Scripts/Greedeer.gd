@@ -23,7 +23,7 @@ func _on_found(_area_rid, area, _area_shape_index, _local_shape_index):
 		$ActiveSprite.visible = true
 		active = true
 		$ActivateNoise.play()
-		$DetectLight.monitoring = false
+		$DetectLight.set_deferred("monitoring", false)
 
 func move(stepCount):
 	if active:
