@@ -9,3 +9,4 @@ extends RigidBody2D
 
 func _on_lifespan_over():
 	queue_free()
+	#FIXME: Place moth hitbox

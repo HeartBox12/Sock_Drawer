@@ -52,3 +52,5 @@ func stop_aim():
 	get_parent().add_child(newGlowThrow)
 	newGlowThrow.position = position + ($WeaponEmitter.position * 2)
 	newGlowThrow.linear_velocity = $WeaponEmitter.get_local_mouse_position().normalized() * 1000
+	
+	
