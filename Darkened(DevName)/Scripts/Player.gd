@@ -5,6 +5,7 @@ const SPEED = 200
 
 var aiming = false
 var move = true
+var collision
 
 var idleDir = "South Idle On"
 
@@ -15,12 +16,13 @@ var stepDir = 0
 var stepCount = 0
 var isLeftStep = true
 
-var light = false
+var light = true
 
 var timerStarted = false
 
 onready var glowThrow = preload("res://Scenes/Instances/ThrownWeapon.tscn")
 onready var footStep = preload("res://Scenes/Instances/Footsteps.tscn")
+onready var deathMenu = preload("res://Scenes/Menus/Death Menu.tscn")
 
 func _process(delta):
 	if move:
@@ -29,7 +31,6 @@ func _process(delta):
 		inputDir.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 		
 		inputDir = inputDir.normalized() # Makes sure player moves same speed in all directions
-		
 		
 		move_and_slide(inputDir * SPEED)
 		
@@ -227,3 +228,5 @@ func _on_Footstepped():
 					
 	newFootStep.position = position + Vector2(0, -9)
 	isLeftStep = !isLeftStep
+	#notify the ENTIRE GAME that the player has taken a step.
+	GameEvents.emit_signal("footstep", stepCount)

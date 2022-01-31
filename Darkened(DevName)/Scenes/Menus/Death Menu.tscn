@@ -55,11 +55,11 @@ margin_left = 298.0
 margin_top = 124.0
 margin_right = 722.0
 margin_bottom = 221.0
-grow_horizontal = 0
-grow_vertical = 0
+grow_horizontal = 2
+grow_vertical = 2
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "Darkened"
+text = "Subsumed"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -70,7 +70,9 @@ margin_left = 400.0
 margin_top = 400.0
 margin_right = 624.0
 margin_bottom = 450.0
-text = "BEGIN"
+grow_horizontal = 2
+grow_vertical = 2
+text = "BEGIN AGAIN"
 __meta__ = {
 "_edit_use_anchors_": false
 }

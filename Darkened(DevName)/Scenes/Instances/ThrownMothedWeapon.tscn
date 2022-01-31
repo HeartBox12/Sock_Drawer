@@ -39,6 +39,9 @@ __meta__ = {
 }
 
 [node name="GreedeerAlerter" type="Area2D" parent="." groups=["Lights"]]
+__meta__ = {
+"_editor_description_": "This is an area designated for colliding with Greedeers. Without this, the Greeders would not alert."
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GreedeerAlerter"]
 shape = SubResource( 3 )

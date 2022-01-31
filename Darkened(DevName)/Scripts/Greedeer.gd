@@ -1,24 +1,24 @@
 extends KinematicBody2D
 
+export var path:PoolVector2Array
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
+var collision
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+#func _ready():
+#	GameEvents.connect("footstep", self, "on_footstep")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
+func _process(delta):
+	if get_slide_count() > 0:
+		collision = get_slide_collision(0)
+		print("Death")
 
 func _on_found(_area_rid, area, _area_shape_index, _local_shape_index):
 	if area.is_in_group("Lights"):
 		$IdleSprite.visible = false
 		$ActiveSprite.visible = true
-	#FIXME: If area is in group "Lights", switch to active state.
+
+func move(stepCount):
+	move_and_slide((path[1] - global_position).normalized() * 2000)

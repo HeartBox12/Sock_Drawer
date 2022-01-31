@@ -139,7 +139,6 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id=13]
 resource_name = "Left Walk Off"
-length = 1.0
 loop = true
 step = 0.166667
 tracks/0/type = "value"
@@ -181,7 +180,6 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id=14]
 resource_name = "Left Walk On"
-length = 1.0
 loop = true
 step = 0.166667
 tracks/0/type = "value"
@@ -514,7 +512,6 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id=17]
 resource_name = "Right Walk Off"
-length = 1.0
 loop = true
 step = 0.166667
 tracks/0/type = "value"
@@ -556,7 +553,6 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id=18]
 resource_name = "Right Walk On"
-length = 1.0
 loop = true
 step = 0.166667
 tracks/0/type = "value"
