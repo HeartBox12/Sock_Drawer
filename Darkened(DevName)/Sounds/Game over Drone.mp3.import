@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Game over Drone.mp3-16d33c0466ba6b56b8279e2bab6b5406.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Game over Drone.mp3"
+dest_files=[ "res://.import/Game over Drone.mp3-16d33c0466ba6b56b8279e2bab6b5406.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

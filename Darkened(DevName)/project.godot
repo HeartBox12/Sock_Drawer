@@ -19,6 +19,7 @@ config/icon="res://Sprites/DarkenedIcon.png"
 [autoload]
 
 GameEvents="*res://Scripts/game_events.gd"
+MusicController="*res://Scenes/Instances/MusicController.tscn"
 
 [display]
 
