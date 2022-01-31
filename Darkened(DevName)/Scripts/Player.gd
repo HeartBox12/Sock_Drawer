@@ -169,10 +169,10 @@ func stop_aim():
 	newGlowThrow.linear_velocity = $WeaponEmitter.get_local_mouse_position().normalized() * 1000
 	
 	light = false
-	move = false
 
 func _on_Footstepped():
 	var fifthstep = false
+	AudioServer.set_bus_effect_enabled(1,0,false)
 	
 	if !light:
 		stepCount += 1
@@ -180,6 +180,7 @@ func _on_Footstepped():
 			fifthstep = true
 			stepCount = 0
 			light = true
+			AudioServer.set_bus_effect_enabled(1,0,true)
 	
 	# Spawns footstep
 	var newFootStep = footStep.instance()
@@ -232,6 +233,8 @@ func _on_Footstepped():
 					
 	newFootStep.position = position + Vector2(0, -9)
 	isLeftStep = !isLeftStep
+	$FootstepSound.play()
+	
 	#notify the ENTIRE GAME that the player has taken a step.
 	GameEvents.emit_signal("footstep", stepCount)
 
