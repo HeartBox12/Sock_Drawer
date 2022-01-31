@@ -16,7 +16,7 @@ var stepDir = 0
 var stepCount = 0
 var isLeftStep = true
 
-var light = true
+export var light = true
 
 var timerStarted = false
 
