@@ -24,6 +24,9 @@ onready var glowThrow = preload("res://Scenes/Instances/ThrownWeapon.tscn")
 onready var footStep = preload("res://Scenes/Instances/Footsteps.tscn")
 onready var deathMenu = preload("res://Scenes/Menus/Death Menu.tscn")
 
+func _ready():
+	GameEvents.connect("light_down", self, "on_light_down")
+
 func _process(delta):
 	if move:
 		# Variable speed determination for controls
@@ -166,6 +169,7 @@ func stop_aim():
 	newGlowThrow.linear_velocity = $WeaponEmitter.get_local_mouse_position().normalized() * 1000
 	
 	light = false
+	move = false
 
 func _on_Footstepped():
 	var fifthstep = false
@@ -230,3 +234,6 @@ func _on_Footstepped():
 	isLeftStep = !isLeftStep
 	#notify the ENTIRE GAME that the player has taken a step.
 	GameEvents.emit_signal("footstep", stepCount)
+
+func on_light_down():
+	move = true
