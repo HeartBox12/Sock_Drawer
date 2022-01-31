@@ -12,10 +12,11 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func on_footstep(stepCount):
-	tree.call_group("Monsters", "Move")
-	monsters = tree.get_nodes_in_group("Monsters")
+func on_footstep(stepCount): #Called whenever the player takes a step.
+	monsters = tree.get_nodes_in_group("Monsters") #Find all nodes to inform
 	for index in range(monsters.size()):
+		#First statement sets the value of a var local to each monster
 		monsters[index].path = get_simple_path(monsters[index].global_position, $YSort/Player.global_position, false)
+		#Second statement makes the monsters move
 		monsters[index].move(stepCount)
 	
