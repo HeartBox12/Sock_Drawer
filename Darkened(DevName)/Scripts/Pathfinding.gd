@@ -15,8 +15,6 @@ func _ready():
 
 func _unhandled_key_input(event):
 	if !event.echo:
-		path = get_simple_path($YSort/Greedeer.global_position, $YSort/Player.global_position)
-		$YSort/Greedeer.move_and_slide(path[1] - path [0])
-		$Line2D.points = path
-		print("Path = ", path)
+		path = get_simple_path($YSort/Greedeer.global_position, $YSort/Player.global_position, false)
+		$YSort/Greedeer.move_and_slide((path[1] - $YSort/Greedeer.global_position).normalized() * 3000)
 	

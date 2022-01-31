@@ -75,7 +75,6 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 [node name="TestScene" type="Node2D"]
 
 [node name="MakeEverythingDark" type="CanvasModulate" parent="."]
-visible = false
 position = Vector2( 363, 313 )
 scale = Vector2( 2, 2 )
 color = Color( 0, 0, 0, 1 )
@@ -100,7 +99,7 @@ tile_data = PoolIntArray( 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65
 [node name="YSort" type="YSort" parent="Navigation2D"]
 
 [node name="Greedeer" parent="Navigation2D/YSort" instance=ExtResource( 4 )]
-position = Vector2( 112, 404 )
+position = Vector2( 794, 490 )
 
 [node name="TestTilesFunctional" type="TileMap" parent="Navigation2D/YSort"]
 position = Vector2( 0, 12 )
@@ -125,6 +124,3 @@ tile_data = PoolIntArray( 327685, 28, 0, 393221, 20, 0, 458757, 28, 0, 524293, 2
 
 [node name="Player" parent="Navigation2D/YSort" instance=ExtResource( 1 )]
 position = Vector2( 832, 299 )
-
-[node name="Line2D" type="Line2D" parent="Navigation2D"]
-position = Vector2( -435, 195 )
