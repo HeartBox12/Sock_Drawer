@@ -829,6 +829,8 @@ wait_time = 0.25
 
 [node name="FootstepSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 7 )
+volume_db = 5.368
+bus = "LightFootstep"
 __meta__ = {
 "_editor_description_": "Plays footstep sounds whenever the player takes a step."
 }
