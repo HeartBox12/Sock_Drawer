@@ -4,7 +4,7 @@ var inputDir = Vector2.ZERO
 const SPEED = 200
 
 var aiming = false
-var move = false
+var move = true
 var collision
 
 var idleDir = "South Idle On"
