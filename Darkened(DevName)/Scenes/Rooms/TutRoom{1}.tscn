@@ -90,8 +90,8 @@ position = Vector2( 836, 97 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 5 )
 animation = "HoldAnim"
-frame = 1
 playing = true
 
-[node name="Roomlight" parent="M1Prompt" instance=ExtResource( 7 )]
-position = Vector2( -236.5, 107.5 )
+[node name="Roomlight" parent="." instance=ExtResource( 7 )]
+position = Vector2( 363, 312 )
+scale = Vector2( 2, 2 )
