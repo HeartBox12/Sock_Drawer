@@ -15,4 +15,6 @@ func _process(_delta):
 
 func move(stepCount):
 	if stepCount % 2 == 0:
-		speedToMoveBy = ((path[1] - global_position).normalized() * 100)
+		speedToMoveBy = ((path[1] - global_position).normalized() * 50)
+	else:
+		speedToMoveBy = Vector2.ZERO
