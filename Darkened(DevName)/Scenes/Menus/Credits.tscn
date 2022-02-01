@@ -1,0 +1,89 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Credits.gd" type="Script" id=1]
+
+[node name="Credits" type="Control"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BoxCredit" type="Label" parent="."]
+margin_left = 341.0
+margin_top = 50.0
+margin_right = 682.0
+margin_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Design and coding"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BoxName" type="Label" parent="BoxCredit"]
+margin_top = 50.0
+margin_right = 341.0
+margin_bottom = 100.0
+text = "HeartBox1"
+align = 1
+
+[node name="WobbCredit" type="Label" parent="."]
+margin_left = 341.0
+margin_top = 300.0
+margin_right = 682.0
+margin_bottom = 350.0
+text = "Entity design and coding"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WobbName" type="Label" parent="WobbCredit"]
+margin_top = 50.0
+margin_right = 341.0
+margin_bottom = 100.0
+text = "Wobbuffet Forme Pikachu/\"Wobb\""
+align = 1
+
+[node name="SugarCredit" type="Label" parent="."]
+visible = false
+margin_top = 150.0
+margin_right = 1024.0
+margin_bottom = 200.0
+text = "Animation and sprites"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SugarName" type="Label" parent="SugarCredit"]
+margin_top = 50.0
+margin_right = 1024.0
+margin_bottom = 100.0
+text = "Sugarbite"
+align = 1
+
+[node name="ThorneCredit" type="Label" parent="."]
+visible = false
+margin_top = 400.0
+margin_right = 1024.0
+margin_bottom = 450.0
+text = "Sounds and music"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ThorneName" type="Label" parent="ThorneCredit"]
+margin_top = 50.0
+margin_right = 1024.0
+margin_bottom = 100.0
+text = "Thornestarr"
+align = 1
+
+[node name="DramaPause" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="DramaPause" to="." method="_on_DramaPause_timeout"]

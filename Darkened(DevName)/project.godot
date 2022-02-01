@@ -13,7 +13,7 @@ config_version=4
 config/name="Darkened (Name Not Final)"
 config/description="You are the last of humanity after the sun goes out.
 "
-run/main_scene="res://Scenes/Menus/LogoScreen.tscn"
+run/main_scene="res://Scenes/Menus/Credits.tscn"
 config/icon="res://Sprites/DarkenedIcon.png"
 
 [autoload]
