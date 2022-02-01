@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/Instances/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tilesets/CollideTiles.tres" type="TileSet" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Scripts/Level Script.gd" type="Script" id=4]
 [ext_resource path="res://Sprites/Spritesheets/M1Prompt.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Spritesheets/M1Prompt2.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Instances/Roomlight.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Instances/Greedeer.tscn" type="PackedScene" id=8]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 5 )
@@ -40,7 +42,6 @@ animations = [ {
 script = ExtResource( 4 )
 
 [node name="MakeEverythingDark" type="CanvasModulate" parent="."]
-visible = false
 position = Vector2( 363, 313 )
 scale = Vector2( 2, 2 )
 color = Color( 0, 0, 0, 1 )
@@ -68,6 +69,7 @@ cell_size = Vector2( 32, 32 )
 format = 1
 
 [node name="TilesCollision" type="TileMap" parent="YSort"]
+visible = false
 light_mask = 0
 position = Vector2( 0, 12 )
 scale = Vector2( 2, 2 )
@@ -84,10 +86,16 @@ tile_data = PoolIntArray( 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0
 position = Vector2( 868, 430 )
 
 [node name="M1Prompt" type="AnimatedSprite" parent="."]
+light_mask = 9
 position = Vector2( 836, 97 )
 scale = Vector2( 2, 2 )
-z_index = 1
 frames = SubResource( 5 )
 animation = "HoldAnim"
 frame = 1
 playing = true
+
+[node name="Roomlight" parent="M1Prompt" instance=ExtResource( 7 )]
+position = Vector2( -236.5, 107.5 )
+
+[node name="Greedeer" parent="." instance=ExtResource( 8 )]
+position = Vector2( 212, 427 )

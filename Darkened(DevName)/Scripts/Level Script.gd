@@ -1,15 +1,14 @@
 extends Node2D
 
 
-# Called when the node enters the scene tree for the first time.
 #func _ready():
 #	$YSort/TilesCollision.get_navigation_polygon()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
-func _unhandled_input(event):
-	if event.is_action_pressed("ui_accept"):
+func _process(delta):
+	if Input.is_mouse_button_pressed(1): #this don't work. 
 		$M1Prompt.animation = "ReleaseAnim"
+	
+	if !Input.is_mouse_button_pressed(1) && $M1Prompt.animation == "ReleaseAnim":
+		$M1Prompt.visible = false

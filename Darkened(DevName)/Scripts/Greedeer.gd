@@ -19,8 +19,7 @@ func _process(delta):
 
 func _on_found(_area_rid, area, _area_shape_index, _local_shape_index):
 	if area.is_in_group("Lights"):
-		$IdleSprite.visible = false
-		$ActiveSprite.visible = true
+		$AnimatedSprite.animation = "Activate"
 		active = true
 		$ActivateNoise.play()
 		$DetectLight.set_deferred("monitoring", false)
@@ -28,3 +27,9 @@ func _on_found(_area_rid, area, _area_shape_index, _local_shape_index):
 func move(stepCount):
 	if active:
 		move_and_slide((path[1] - global_position).normalized() * 2000)
+
+
+func _on_AnimatedSprite_animation_finished():
+	if $AnimatedSprite.animation == "Activate":
+		$AnimatedSprite.animation = "Active"
+		GameEvents.emit_signal("greedeer_active")
