@@ -14,8 +14,8 @@ var active = false
 func _process(delta):
 	if get_slide_count() > 0:
 		collision = get_slide_collision(0)
-		print("Death")
-		get_tree().change_scene("res://Scenes/Menus/Death Menu.tscn")
+		if collision.collider.is_in_group("Player"):
+			get_tree().change_scene("res://Scenes/Menus/Death Menu.tscn")
 
 func _on_found(_area_rid, area, _area_shape_index, _local_shape_index):
 	if area.is_in_group("Lights"):
