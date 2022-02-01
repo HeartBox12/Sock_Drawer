@@ -1,38 +1,53 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Credits.gd" type="Script" id=1]
+[ext_resource path="res://UI/MainTheme.tres" type="Theme" id=2]
+[ext_resource path="res://Fonts/CreditHeading.tres" type="DynamicFont" id=3]
 
 [node name="Credits" type="Control"]
+theme = ExtResource( 2 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="DramaPause" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
 [node name="BoxCredit" type="Label" parent="."]
-margin_left = 341.0
-margin_top = 50.0
-margin_right = 682.0
-margin_bottom = 100.0
+anchor_top = 0.066
+anchor_bottom = 0.066
+margin_top = 39.336
+margin_right = 1024.0
+margin_bottom = 88.336
 grow_horizontal = 2
 grow_vertical = 2
-text = "Design and coding"
+custom_fonts/font = ExtResource( 3 )
+text = "Design and Coding:"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="BoxName" type="Label" parent="BoxCredit"]
-margin_top = 50.0
-margin_right = 341.0
-margin_bottom = 100.0
+margin_left = 334.0
+margin_top = 60.0
+margin_right = 675.0
+margin_bottom = 110.0
 text = "HeartBox1"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="WobbCredit" type="Label" parent="."]
-margin_left = 341.0
-margin_top = 300.0
-margin_right = 682.0
-margin_bottom = 350.0
+anchor_top = 0.223
+anchor_bottom = 0.223
+margin_top = 185.908
+margin_right = 1024.0
+margin_bottom = 234.908
+custom_fonts/font = ExtResource( 3 )
 text = "Entity design and coding"
 align = 1
 __meta__ = {
@@ -40,17 +55,23 @@ __meta__ = {
 }
 
 [node name="WobbName" type="Label" parent="WobbCredit"]
-margin_top = 50.0
-margin_right = 341.0
-margin_bottom = 100.0
+margin_left = 187.0
+margin_top = 65.66
+margin_right = 845.0
+margin_bottom = 115.66
 text = "Wobbuffet Forme Pikachu/\"Wobb\""
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="SugarCredit" type="Label" parent="."]
-visible = false
-margin_top = 150.0
+anchor_top = 0.388
+anchor_bottom = 0.388
+margin_top = 337.248
 margin_right = 1024.0
-margin_bottom = 200.0
+margin_bottom = 386.248
+custom_fonts/font = ExtResource( 3 )
 text = "Animation and sprites"
 align = 1
 __meta__ = {
@@ -65,10 +86,12 @@ text = "Sugarbite"
 align = 1
 
 [node name="ThorneCredit" type="Label" parent="."]
-visible = false
-margin_top = 400.0
+anchor_top = 0.526
+anchor_bottom = 0.526
+margin_top = 472.496
 margin_right = 1024.0
-margin_bottom = 450.0
+margin_bottom = 521.496
+custom_fonts/font = ExtResource( 3 )
 text = "Sounds and music"
 align = 1
 __meta__ = {
@@ -81,9 +104,5 @@ margin_right = 1024.0
 margin_bottom = 100.0
 text = "Thornestarr"
 align = 1
-
-[node name="DramaPause" type="Timer" parent="."]
-wait_time = 3.0
-autostart = true
 
 [connection signal="timeout" from="DramaPause" to="." method="_on_DramaPause_timeout"]

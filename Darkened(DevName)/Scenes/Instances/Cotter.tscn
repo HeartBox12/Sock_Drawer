@@ -66,5 +66,5 @@ stream = ExtResource( 4 )
 position = Vector2( 0, -67 )
 frames = SubResource( 18 )
 animation = "New Anim"
-frame = 2
+frame = 1
 playing = true
