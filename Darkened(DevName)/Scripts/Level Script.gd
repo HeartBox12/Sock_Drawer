@@ -1,7 +1,8 @@
 extends Node2D
 
 
-#func _ready():
+func _ready():
+	MusicController.play_music("res://Sounds/Spooky Ambient.mp3")
 #	$YSort/TilesCollision.get_navigation_polygon()
 
 

@@ -8,10 +8,12 @@ func _ready():
 
 
 func _on_lifespan_over():
-	GameEvents.emit_signal("light_down")
-	queue_free()
-	#FIXME: Place moth hitbox
+	$Flickerout.play("TurnOff")
 
 func on_greedeer_active():
+	$Flickerout.play("TurnOff")
+
+
+func _on_Flickerout_animation_finished(anim_name):
 	GameEvents.emit_signal("light_down")
 	queue_free()

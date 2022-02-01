@@ -182,6 +182,8 @@ func _on_Footstepped():
 			light = true
 			AudioServer.set_bus_effect_enabled(1,0,true)
 	
+	$FootstepSound.play()
+	
 	# Spawns footstep
 	var newFootStep = footStep.instance()
 	get_parent().add_child(newFootStep)
@@ -233,7 +235,6 @@ func _on_Footstepped():
 					
 	newFootStep.position = position + Vector2(0, -9)
 	isLeftStep = !isLeftStep
-	$FootstepSound.play()
 	
 	#notify the ENTIRE GAME that the player has taken a step.
 	GameEvents.emit_signal("footstep", stepCount)
