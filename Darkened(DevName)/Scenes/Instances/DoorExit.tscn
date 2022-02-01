@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sounds/Door_open.wav" type="AudioStream" id=1]
+[ext_resource path="res://Scripts/DoorExit.gd" type="Script" id=2]
+
+[node name="DoorExit" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_player_in"]
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_player_in"]

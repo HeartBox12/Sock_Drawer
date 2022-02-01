@@ -11,7 +11,7 @@ var active = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if get_slide_count() > 0:
 		collision = get_slide_collision(0)
 		if collision.collider.is_in_group("Player"):
@@ -24,7 +24,7 @@ func _on_found(_area_rid, area, _area_shape_index, _local_shape_index):
 		$ActivateNoise.play()
 		$DetectLight.set_deferred("monitoring", false)
 
-func move(stepCount):
+func move(_stepCount):
 	if active:
 		move_and_slide((path[1] - global_position).normalized() * 3000)
 

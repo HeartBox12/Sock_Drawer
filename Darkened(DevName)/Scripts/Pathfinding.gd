@@ -1,7 +1,6 @@
 extends Navigation2D
 onready var tree = get_tree()
 var monsters:Array
-var index:int
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

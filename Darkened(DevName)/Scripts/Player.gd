@@ -4,7 +4,7 @@ var inputDir = Vector2.ZERO
 const SPEED = 200
 
 var aiming = false
-var move = true
+var move = false
 var collision
 
 var idleDir = "South Idle On"
@@ -26,8 +26,9 @@ onready var deathMenu = preload("res://Scenes/Menus/Death Menu.tscn")
 
 func _ready():
 	GameEvents.connect("light_down", self, "on_light_down")
+	GameEvents.connect("player_controlling", self, "_in_level")
 
-func _process(delta):
+func _process(_delta):
 	if move:
 		# Variable speed determination for controls
 		inputDir.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
@@ -239,4 +240,8 @@ func _on_Footstepped():
 	GameEvents.emit_signal("footstep", stepCount)
 
 func on_light_down():
+	move = true
+
+func _in_level():
+	visible = true
 	move = true
