@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Sounds/Door_open.wav" type="AudioStream" id=1]
+[ext_resource path="res://Sounds/Door_Close.wav" type="AudioStream" id=1]
 [ext_resource path="res://Scripts/DoorExit.gd" type="Script" id=2]
 
 [node name="DoorExit" type="Node2D"]

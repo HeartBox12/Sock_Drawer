@@ -27,6 +27,7 @@ onready var deathMenu = preload("res://Scenes/Menus/Death Menu.tscn")
 func _ready():
 	GameEvents.connect("light_down", self, "on_light_down")
 	GameEvents.connect("player_controlling", self, "_in_level")
+	GameEvents.connect("level_clear", self, "_on_level_clear")
 
 func _process(_delta):
 	if move:
@@ -246,3 +247,7 @@ func on_light_down():
 func _in_level():
 	visible = true
 	move = true
+
+func _on_level_clear():
+	visible = false
+	move = false

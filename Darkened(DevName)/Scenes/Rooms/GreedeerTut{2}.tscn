@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/Instances/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tilesets/CollideTiles.tres" type="TileSet" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scenes/Instances/Roomlight.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scripts/LoadMusic.gd" type="Script" id=7]
 [ext_resource path="res://Scenes/Instances/DoorExit.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Instances/DoorEntrance.tscn" type="PackedScene" id=9]
 
 [node name="TestScene" type="Node2D"]
 script = ExtResource( 7 )
@@ -67,3 +68,6 @@ position = Vector2( 867, 426 )
 
 [node name="DoorExit" parent="." instance=ExtResource( 8 )]
 position = Vector2( 937, 469 )
+
+[node name="DoorEntrance" parent="." instance=ExtResource( 9 )]
+position = Vector2( 512, 173 )
