@@ -1,0 +1,96 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scripts/Level Script.gd" type="Script" id=1]
+[ext_resource path="res://Tilesets/CollideTiles.tres" type="TileSet" id=2]
+[ext_resource path="res://Tilesets/TestTileset.tres" type="TileSet" id=3]
+[ext_resource path="res://Sprites/Spritesheets/M1Prompt.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Spritesheets/M1Prompt2.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Instances/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Instances/Roomlight.tscn" type="PackedScene" id=7]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 4 )
+region = Rect2( 128, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 5 )
+region = Rect2( 128, 0, 128, 128 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": true,
+"name": "HoldAnim",
+"speed": 3.0
+}, {
+"frames": [ SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "ReleaseAnim",
+"speed": 5.0
+} ]
+
+[node name="tutRoom{1}" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="MakeEverythingDark" type="CanvasModulate" parent="."]
+position = Vector2( 363, 313 )
+scale = Vector2( 2, 2 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="TestTilesFunctional" type="TileMap" parent="YSort"]
+position = Vector2( 0, 12 )
+scale = Vector2( 2, 2 )
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+cell_tile_origin = 2
+cell_y_sort = true
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 196609, 37, 0, 196610, 38, 0, 196611, 38, 0, 196612, 38, 0, 196613, 38, 0, 196614, 38, 0, 196615, 38, 0, 196616, 38, 0, 196617, 38, 0, 196618, 38, 0, 196619, 38, 0, 196620, 38, 0, 196621, 38, 0, 196622, 5, 0, 262145, 8, 0, 262146, 9, 0, 262147, 9, 0, 262148, 9, 0, 262149, 9, 0, 262150, 9, 0, 262151, 9, 0, 262152, 9, 0, 262153, 9, 0, 262154, 9, 0, 262155, 9, 0, 262156, 9, 0, 262157, 9, 0, 262158, 8, 0, 327681, 3, 0, 327694, 3, 0, 393217, 4, 0, 393230, 4, 0, 458753, 0, 0, 458754, 38, 0, 458755, 38, 0, 458756, 38, 0, 458757, 38, 0, 458758, 38, 0, 458759, 38, 0, 458760, 38, 0, 458761, 38, 0, 458762, 38, 0, 458763, 38, 0, 458764, 38, 0, 458765, 38, 0, 458766, 14, 0, 524289, 11, 0, 524290, 9, 0, 524291, 9, 0, 524292, 9, 0, 524293, 9, 0, 524294, 9, 0, 524295, 9, 0, 524296, 9, 0, 524297, 9, 0, 524298, 9, 0, 524299, 9, 0, 524300, 9, 0, 524301, 9, 0, 524302, 10, 0 )
+
+[node name="TestTilesDecorative" type="TileMap" parent="YSort"]
+position = Vector2( 0, 12 )
+scale = Vector2( 2, 2 )
+z_index = -2
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+format = 1
+
+[node name="TilesCollision" type="TileMap" parent="YSort"]
+visible = false
+light_mask = 0
+position = Vector2( 0, 12 )
+scale = Vector2( 2, 2 )
+z_index = -3
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+show_collision = true
+collision_layer = 3
+collision_mask = 3
+format = 1
+tile_data = PoolIntArray( 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 327681, 0, 0, 327682, 1, 0, 327683, 1, 0, 327684, 1, 0, 327685, 1, 0, 327686, 1, 0, 327687, 1, 0, 327688, 1, 0, 327689, 1, 0, 327690, 1, 0, 327691, 1, 0, 327692, 1, 0, 327693, 1, 0, 327694, 0, 0, 393217, 1, 0, 393218, 1, 0, 393219, 1, 0, 393220, 1, 0, 393221, 1, 0, 393222, 1, 0, 393223, 1, 0, 393224, 1, 0, 393225, 1, 0, 393226, 1, 0, 393227, 1, 0, 393228, 1, 0, 393229, 1, 0, 393230, 1, 0, 458753, 0, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0, 458759, 1, 0, 458760, 1, 0, 458761, 1, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 458765, 1, 0, 458766, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0 )
+
+[node name="Player" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 868, 430 )
+
+[node name="M1Prompt" type="AnimatedSprite" parent="."]
+light_mask = 9
+position = Vector2( 836, 97 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 5 )
+animation = "HoldAnim"
+playing = true
+
+[node name="Roomlight" parent="M1Prompt" instance=ExtResource( 7 )]
+position = Vector2( -236.5, 107.5 )

@@ -26,7 +26,7 @@ func _on_found(_area_rid, area, _area_shape_index, _local_shape_index):
 
 func move(stepCount):
 	if active:
-		move_and_slide((path[1] - global_position).normalized() * 2000)
+		move_and_slide((path[1] - global_position).normalized() * 3000)
 
 
 func _on_AnimatedSprite_animation_finished():

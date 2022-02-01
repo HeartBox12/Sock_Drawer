@@ -12,6 +12,7 @@
 script = ExtResource( 7 )
 
 [node name="MakeEverythingDark" type="CanvasModulate" parent="."]
+visible = false
 position = Vector2( 363, 313 )
 scale = Vector2( 2, 2 )
 color = Color( 0, 0, 0, 1 )
