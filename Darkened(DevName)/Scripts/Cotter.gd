@@ -11,10 +11,9 @@ func _process(_delta):
 		collision = get_slide_collision(0)
 		if collision.collider.is_in_group("Player"):
 			get_tree().change_scene("res://Scenes/Menus/Death Menu.tscn")
-	move_and_slide(speedToMoveBy)
 
 func move(stepCount):
 	if stepCount % 2 == 0:
-		speedToMoveBy = ((path[1] - global_position).normalized() * 50)
+		move_and_slide((path[1] - global_position).normalized() * 2000)
 	else:
 		speedToMoveBy = Vector2.ZERO
