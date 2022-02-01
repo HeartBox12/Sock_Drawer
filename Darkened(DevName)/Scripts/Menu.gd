@@ -5,4 +5,4 @@ func _ready():
 	MusicController.stop_music()
 
 func _on_StartButton_pressed():
-	get_tree().change_scene("res://Scenes/Rooms/GreedeerTut{2}.tscn")
+	get_tree().change_scene("res://Scenes/Rooms/TutRoom{1}.tscn")

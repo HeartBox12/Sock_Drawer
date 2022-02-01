@@ -1,11 +1,5 @@
 extends Area2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -27,4 +21,5 @@ func _on_approached(body):
 
 
 func _player_out():
-	get_tree().change_scene("res://Scenes/Rooms/GreedeerTut{2}.tscn")
+	GameEvents.currLevel = GameEvents.currLevel + 1
+	get_tree().change_scene(GameEvents.levelList[GameEvents.currLevel])

@@ -5,4 +5,4 @@ func _ready():
 	MusicController.play_music("res://Sounds/Game over Drone.mp3")
 
 func _on_StartButton_pressed():
-	get_tree().change_scene("res://Scenes/Rooms/GreedeerTut{2}.tscn")
+	get_tree().change_scene(GameEvents.levelList[GameEvents.currLevel])
