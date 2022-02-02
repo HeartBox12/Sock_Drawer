@@ -62,7 +62,7 @@ tile_data = PoolIntArray( 7, 15, 0, 8, 25, 0, 9, 16, 0, 10, 16, 0, 11, 16, 0, 12
 [node name="Player" parent="Navigation2D/YSort" instance=ExtResource( 1 )]
 position = Vector2( 335, 301 )
 
-[node name="Greedeer" parent="Navigation2D/YSort" instance=ExtResource( 10 )]
+[node name="Cotter" parent="Navigation2D/YSort" instance=ExtResource( 10 )]
 position = Vector2( 95, 112 )
 
 [node name="Greedeer2" parent="Navigation2D/YSort" instance=ExtResource( 4 )]

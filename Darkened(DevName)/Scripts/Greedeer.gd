@@ -23,6 +23,12 @@ func _on_found(_area_rid, area, _area_shape_index, _local_shape_index):
 		active = true
 		$ActivateNoise.play()
 		$DetectLight.set_deferred("monitoring", false)
+	elif area.is_in_group("LightSelf"):
+		$AnimatedSprite.animation = "Activate"
+		active = true
+		$ActivateNoise.play()
+		$DetectLight.set_deferred("monitoring", false)
+		yield(get_tree().create_timer(2), "timeout")
 
 func move(_stepCount):
 	if active:
