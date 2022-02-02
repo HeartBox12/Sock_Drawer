@@ -158,7 +158,7 @@ func _process(_delta):
 					$FootstepTime.stop()
 					timerStarted = false
 	else:
-		$PlayerAnimation.play("Cry")
+		$PlayerAnimation.play(idleDir) #Used to switch to "cry"
 
 func begin_aim():
 	$WeaponEmitter/RotateAround.visible = true
@@ -172,6 +172,8 @@ func stop_aim():
 	newGlowThrow.linear_velocity = $WeaponEmitter.get_local_mouse_position().normalized() * 1000
 	
 	light = false
+	move = false
+	showFootSteps = false
 
 func _on_Footstepped():
 	if showFootSteps:
@@ -246,6 +248,7 @@ func _on_Footstepped():
 
 func on_light_down(): #Triggers when a light vanishes, one way or another
 	move = true
+	showFootSteps = true
 
 func _in_level(): #triggers when the player-entering-level animation finishes
 	showFootSteps = true
