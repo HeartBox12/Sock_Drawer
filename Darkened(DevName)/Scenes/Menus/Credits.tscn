@@ -42,6 +42,7 @@ __meta__ = {
 }
 
 [node name="WobbCredit" type="Label" parent="."]
+visible = false
 anchor_top = 0.223
 anchor_bottom = 0.223
 margin_top = 185.908

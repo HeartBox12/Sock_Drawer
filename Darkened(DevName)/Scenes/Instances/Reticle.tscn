@@ -27,8 +27,10 @@ __meta__ = {
 }
 
 [node name="Reticle" type="Sprite" parent="."]
-position = Vector2( 39, 0 )
+light_mask = 8
+position = Vector2( 80, 0 )
 rotation = 1.57079
+scale = Vector2( 2, 2 )
 z_index = 1
 texture = ExtResource( 1 )
 hframes = 3

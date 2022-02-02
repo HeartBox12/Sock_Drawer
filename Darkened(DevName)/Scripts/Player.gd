@@ -14,6 +14,7 @@ var idleDir = "South Idle On"
 var stepDir = 0 
 
 var stepCount = 0
+var showFootSteps = true
 var isLeftStep = true
 
 export var light = true
@@ -173,81 +174,85 @@ func stop_aim():
 	light = false
 
 func _on_Footstepped():
-	var fifthstep = false
-	AudioServer.set_bus_effect_enabled(1,0,false)
-	
-	if !light:
-		stepCount += 1
-		if stepCount >= 10:
-			fifthstep = true
-			stepCount = 0
-			light = true
-			AudioServer.set_bus_effect_enabled(1,0,true)
-	
-	$FootstepSound.play()
-	
-	# Spawns footstep
-	var newFootStep = footStep.instance()
-	get_parent().add_child(newFootStep)
-	
-	# Assign Footstep Animation based on Step Direction
-	if fifthstep:
-		if isLeftStep:
-			match stepDir:
-				0:
-					newFootStep.get_node("AnimationPlayer").play("DownStepOnLeftFoot")
-				1:
-					newFootStep.get_node("AnimationPlayer").play("LeftStepOnLeftFoot")
-				2:
-					newFootStep.get_node("AnimationPlayer").play("UpStepOnLeftFoot")
-				3:
-					newFootStep.get_node("AnimationPlayer").play("RightStepOnLeftFoot")
-		else:
-			match stepDir:
-				0:
-					newFootStep.get_node("AnimationPlayer").play("DownStepOnRightFoot")
-				1:
-					newFootStep.get_node("AnimationPlayer").play("LeftStepOnRightFoot")
-				2:
-					newFootStep.get_node("AnimationPlayer").play("UpStepOnRightFoot")
-				3:
-					newFootStep.get_node("AnimationPlayer").play("RightStepOnRightFoot")
+	if showFootSteps:
+		var fifthstep = false
+		AudioServer.set_bus_effect_enabled(1,0,false)
 		
-	else:
-		if isLeftStep:
-			match stepDir:
-				0:
-					newFootStep.get_node("AnimationPlayer").play("DownStepOffLeftFoot")
-				1:
-					newFootStep.get_node("AnimationPlayer").play("LeftStepOffLeftFoot")
-				2:
-					newFootStep.get_node("AnimationPlayer").play("UpStepOffLeftFoot")
-				3:
-					newFootStep.get_node("AnimationPlayer").play("RightStepOffLeftFoot")
+		if !light:
+			stepCount += 1
+			if stepCount >= 10:
+				fifthstep = true
+				stepCount = 0
+				light = true
+				AudioServer.set_bus_effect_enabled(1,0,true)
+		
+		$FootstepSound.play()
+		
+		# Spawns footstep
+		var newFootStep = footStep.instance()
+		get_parent().add_child(newFootStep)
+		
+		# Assign Footstep Animation based on Step Direction
+		if fifthstep:
+			if isLeftStep:
+				match stepDir:
+					0:
+						newFootStep.get_node("AnimationPlayer").play("DownStepOnLeftFoot")
+					1:
+						newFootStep.get_node("AnimationPlayer").play("LeftStepOnLeftFoot")
+					2:
+						newFootStep.get_node("AnimationPlayer").play("UpStepOnLeftFoot")
+					3:
+						newFootStep.get_node("AnimationPlayer").play("RightStepOnLeftFoot")
+			else:
+				match stepDir:
+					0:
+						newFootStep.get_node("AnimationPlayer").play("DownStepOnRightFoot")
+					1:
+						newFootStep.get_node("AnimationPlayer").play("LeftStepOnRightFoot")
+					2:
+						newFootStep.get_node("AnimationPlayer").play("UpStepOnRightFoot")
+					3:
+						newFootStep.get_node("AnimationPlayer").play("RightStepOnRightFoot")
+			
 		else:
-			match stepDir:
-				0:
-					newFootStep.get_node("AnimationPlayer").play("DownStepOffRightFoot")
-				1:
-					newFootStep.get_node("AnimationPlayer").play("LeftStepOffRightFoot")
-				2:
-					newFootStep.get_node("AnimationPlayer").play("UpStepOffRightFoot")
-				3:
-					newFootStep.get_node("AnimationPlayer").play("RightStepOffRightFoot")
-					
-	newFootStep.position = position + Vector2(0, -9)
-	isLeftStep = !isLeftStep
+			if isLeftStep:
+				match stepDir:
+					0:
+						newFootStep.get_node("AnimationPlayer").play("DownStepOffLeftFoot")
+					1:
+						newFootStep.get_node("AnimationPlayer").play("LeftStepOffLeftFoot")
+					2:
+						newFootStep.get_node("AnimationPlayer").play("UpStepOffLeftFoot")
+					3:
+						newFootStep.get_node("AnimationPlayer").play("RightStepOffLeftFoot")
+			else:
+				match stepDir:
+					0:
+						newFootStep.get_node("AnimationPlayer").play("DownStepOffRightFoot")
+					1:
+						newFootStep.get_node("AnimationPlayer").play("LeftStepOffRightFoot")
+					2:
+						newFootStep.get_node("AnimationPlayer").play("UpStepOffRightFoot")
+					3:
+						newFootStep.get_node("AnimationPlayer").play("RightStepOffRightFoot")
+						
+		newFootStep.position = position + Vector2(0, -9)
+		isLeftStep = !isLeftStep
+		
+		#notify the ENTIRE GAME that the player has taken a step.
+		GameEvents.emit_signal("footstep", stepCount)
 	
-	#notify the ENTIRE GAME that the player has taken a step.
-	GameEvents.emit_signal("footstep", stepCount)
 
 func on_light_down(): #Triggers when a light vanishes, one way or another
 	move = true
 
 func _in_level(): #triggers when the player-entering-level animation finishes
+	showFootSteps = true
 	visible = true
 	move = true
 
 func _on_level_clear(): #Triggers when the player reaches the end and the animation begins playing
+	showFootSteps = false
 	visible = false
 	move = false

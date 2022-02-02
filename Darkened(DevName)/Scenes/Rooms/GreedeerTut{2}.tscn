@@ -65,7 +65,7 @@ format = 1
 visible = false
 position = Vector2( 867, 426 )
 
-[node name="Greedeer2" parent="Navigation2D/YSort" instance=ExtResource( 10 )]
+[node name="Cotter" parent="Navigation2D/YSort" instance=ExtResource( 10 )]
 position = Vector2( 283, 428 )
 
 [node name="Roomlight" parent="." instance=ExtResource( 6 )]
