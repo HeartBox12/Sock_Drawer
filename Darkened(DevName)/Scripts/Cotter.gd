@@ -11,6 +11,12 @@ func _process(_delta):
 		collision = get_slide_collision(0)
 		if collision.collider.is_in_group("Player"):
 			get_tree().change_scene("res://Scenes/Menus/Death Menu.tscn")
+			
+	#Flips Sprite
+	if get_parent().get_node("Player").position.x < position.x:
+		$CotterAnimation.flip_h = true
+	else:
+		$CotterAnimation.flip_h = false
 
 func move(stepCount):
 	if stepCount % 2 == 0:

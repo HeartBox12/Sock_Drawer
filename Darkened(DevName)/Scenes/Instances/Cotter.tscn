@@ -37,7 +37,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Greedeer" type="KinematicBody2D" groups=["Monsters"]]
+[node name="Cotter" type="KinematicBody2D" groups=["Monsters"]]
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -62,9 +62,9 @@ texture = ExtResource( 2 )
 [node name="ActivateNoise" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+[node name="CotterAnimation" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -67 )
 frames = SubResource( 18 )
 animation = "New Anim"
-frame = 1
+frame = 3
 playing = true
