@@ -59,18 +59,6 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Vector2( 0, -13.5 ) ]
 }
-tracks/3/type = "value"
-tracks/3/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:disabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
 
 [sub_resource type="Animation" id=9]
 resource_name = "Left Idle Off"
@@ -112,30 +100,6 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( -9.5, -13 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:disabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -13.5 ) ]
 }
 
 [sub_resource type="Animation" id=10]
@@ -179,30 +143,6 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Vector2( -9.5, -13 ) ]
 }
-tracks/3/type = "value"
-tracks/3/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -13.5 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:disabled")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
 
 [sub_resource type="Animation" id=13]
 resource_name = "Left Walk Off"
@@ -244,30 +184,6 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Vector2( -9.5, -13 ) ]
 }
-tracks/3/type = "value"
-tracks/3/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:disabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -13.5 ) ]
-}
 
 [sub_resource type="Animation" id=14]
 resource_name = "Left Walk On"
@@ -308,30 +224,6 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( -9.5, -13 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:disabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -13.5 ) ]
 }
 
 [sub_resource type="Animation" id=19]
@@ -375,30 +267,6 @@ tracks/2/keys = {
 "update": 0,
 "values": [ 0.01 ]
 }
-tracks/3/type = "value"
-tracks/3/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:disabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -13.5 ) ]
-}
 
 [sub_resource type="Animation" id=21]
 resource_name = "North Idle On"
@@ -440,30 +308,6 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 72, 73, 74, 75, 76 ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:disabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -13.5 ) ]
 }
 
 [sub_resource type="Animation" id=20]
@@ -507,30 +351,6 @@ tracks/2/keys = {
 "update": 0,
 "values": [ 0.01 ]
 }
-tracks/3/type = "value"
-tracks/3/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:disabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -13.5 ) ]
-}
 
 [sub_resource type="Animation" id=22]
 resource_name = "North Walk On"
@@ -573,30 +393,6 @@ tracks/2/keys = {
 "update": 0,
 "values": [ 1.0 ]
 }
-tracks/3/type = "value"
-tracks/3/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:disabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -13.5 ) ]
-}
 
 [sub_resource type="Animation" id=7]
 length = 0.001
@@ -635,30 +431,6 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.01 ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -13.5 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:disabled")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ false ]
 }
 
 [sub_resource type="Animation" id=15]
@@ -702,30 +474,6 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Vector2( 10, -13.5 ) ]
 }
-tracks/3/type = "value"
-tracks/3/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:disabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -13.5 ) ]
-}
 
 [sub_resource type="Animation" id=16]
 resource_name = "Right Idle On"
@@ -768,30 +516,6 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Vector2( 10, -13.5 ) ]
 }
-tracks/3/type = "value"
-tracks/3/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:disabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -13.5 ) ]
-}
 
 [sub_resource type="Animation" id=17]
 resource_name = "Right Walk Off"
@@ -833,30 +557,6 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Vector2( 10, -13.5 ) ]
 }
-tracks/3/type = "value"
-tracks/3/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:disabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -13.5 ) ]
-}
 
 [sub_resource type="Animation" id=18]
 resource_name = "Right Walk On"
@@ -897,30 +597,6 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 10, -13.5 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:disabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -13.5 ) ]
 }
 
 [sub_resource type="Animation" id=11]
@@ -964,30 +640,6 @@ tracks/2/keys = {
 "update": 0,
 "values": [ 0.01 ]
 }
-tracks/3/type = "value"
-tracks/3/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -13.5 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:disabled")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
 
 [sub_resource type="Animation" id=8]
 resource_name = "South Idle On"
@@ -1029,30 +681,6 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, -13.5 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -13.5 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:disabled")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
 }
 
 [sub_resource type="Animation" id=12]
@@ -1096,30 +724,6 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Vector2( 0, -13.5 ) ]
 }
-tracks/3/type = "value"
-tracks/3/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -13.5 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:disabled")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
 
 [sub_resource type="Animation" id=6]
 resource_name = "South Walk On"
@@ -1157,30 +761,6 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -13.5 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:disabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("WeaponEmitter/GreedeerAlerterSelf/GreederTiggerWalk:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
