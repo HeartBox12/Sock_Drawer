@@ -9,14 +9,6 @@
 [ext_resource path="res://Scenes/Instances/Roomlight.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Instances/Greedeer.tscn" type="PackedScene" id=8]
 
-[sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 5 )
-region = Rect2( 0, 0, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 5 )
-region = Rect2( 128, 0, 128, 128 )
-
 [sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 6 )
 region = Rect2( 0, 0, 128, 128 )
@@ -25,23 +17,32 @@ region = Rect2( 0, 0, 128, 128 )
 atlas = ExtResource( 6 )
 region = Rect2( 128, 0, 128, 128 )
 
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 5 )
+region = Rect2( 128, 0, 128, 128 )
+
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ) ],
-"loop": true,
-"name": "HoldAnim",
-"speed": 3.0
-}, {
 "frames": [ SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
 "name": "ReleaseAnim",
 "speed": 5.0
+}, {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": true,
+"name": "HoldAnim",
+"speed": 3.0
 } ]
 
 [node name="tutRoom" type="Node2D"]
 script = ExtResource( 4 )
 
 [node name="MakeEverythingDark" type="CanvasModulate" parent="."]
+visible = false
 position = Vector2( 363, 313 )
 scale = Vector2( 2, 2 )
 color = Color( 0, 0, 0, 1 )
@@ -91,7 +92,6 @@ position = Vector2( 836, 97 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 5 )
 animation = "HoldAnim"
-frame = 1
 playing = true
 
 [node name="Greedeer" parent="." instance=ExtResource( 8 )]

@@ -4,10 +4,10 @@ var inputDir = Vector2.ZERO
 const SPEED = 200
 
 var aiming = false
-var move = true
+var move = false
 var collision
 
-var idleDir = "South Idle On"
+var idleDir = "Left Idle On"
 
 # Direction id of footsteps spawned.
 # 0 = Down, 1 = Left, 2 = Up, 3 = RIght
