@@ -3,7 +3,7 @@
 [ext_resource path="res://Sprites/TestGreedeerIdle.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/TestGreedeerActive.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/Cotter.gd" type="Script" id=3]
-[ext_resource path="res://Sounds/Creature_1_Call.wav" type="AudioStream" id=4]
+[ext_resource path="res://Sounds/Creature_Steps.wav" type="AudioStream" id=4]
 [ext_resource path="res://Sprites/Spritesheets/Cotter.png" type="Texture" id=5]
 
 [sub_resource type="CapsuleShape2D" id=1]
@@ -59,12 +59,12 @@ texture = ExtResource( 2 )
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
 
-[node name="ActivateNoise" type="AudioStreamPlayer2D" parent="."]
+[node name="FootstepNoise" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
 
 [node name="CotterAnimation" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -67 )
 frames = SubResource( 18 )
 animation = "New Anim"
-frame = 3
+frame = 4
 playing = true

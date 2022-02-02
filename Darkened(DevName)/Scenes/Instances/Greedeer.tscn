@@ -15,26 +15,6 @@ height = 34.0
 radius = 42.0
 height = 36.0
 
-[sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 6 )
-region = Rect2( 0, 0, 170, 140 )
-
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 6 )
-region = Rect2( 170, 0, 170, 140 )
-
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 6 )
-region = Rect2( 340, 0, 170, 140 )
-
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 6 )
-region = Rect2( 510, 0, 170, 140 )
-
-[sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 6 )
-region = Rect2( 680, 0, 170, 140 )
-
 [sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 7 )
 region = Rect2( 0, 0, 100, 140 )
@@ -54,6 +34,26 @@ region = Rect2( 300, 0, 100, 140 )
 [sub_resource type="AtlasTexture" id=17]
 atlas = ExtResource( 7 )
 region = Rect2( 400, 0, 100, 140 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 170, 140 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 6 )
+region = Rect2( 170, 0, 170, 140 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 6 )
+region = Rect2( 340, 0, 170, 140 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 6 )
+region = Rect2( 510, 0, 170, 140 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 6 )
+region = Rect2( 680, 0, 170, 140 )
 
 [sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 5 )
@@ -77,14 +77,14 @@ region = Rect2( 680, 0, 170, 140 )
 
 [sub_resource type="SpriteFrames" id=18]
 animations = [ {
-"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
-"loop": true,
-"name": "Active",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
 "loop": true,
 "name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
+"loop": true,
+"name": "Active",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
@@ -128,7 +128,6 @@ stream = ExtResource( 4 )
 position = Vector2( 0, -67 )
 frames = SubResource( 18 )
 animation = "Idle"
-frame = 4
 playing = true
 
 [connection signal="area_shape_entered" from="DetectLight" to="." method="_on_found"]

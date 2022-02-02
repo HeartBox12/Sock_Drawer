@@ -21,5 +21,6 @@ func _process(_delta):
 func move(stepCount):
 	if stepCount % 2 == 0:
 		move_and_slide((path[1] - global_position).normalized() * 2000)
+		$FootstepNoise.play()
 	else:
 		speedToMoveBy = Vector2.ZERO

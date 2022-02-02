@@ -10,6 +10,7 @@ signal level_clear() #Called when the player has reached (But not played the sou
 var currLevel = 0
 var levelList:PoolStringArray = ["res://Scenes/Rooms/TutRoom{1}.tscn",
 "res://Scenes/Rooms/GreedeerTut{2}.tscn",
+"res://Scenes/Rooms/GreedeerIntro.tscn",
 "res://Scenes/Rooms/OpenLevel1.tscn",
 "res://Scenes/Rooms/OpenLevel2.tscn",
 "res://Scenes/Rooms/OpenLevel3.tscn",

@@ -179,9 +179,8 @@ func _on_Footstepped():
 	if showFootSteps:
 		var fifthstep = false
 		AudioServer.set_bus_effect_enabled(1,0,false)
-		
+		stepCount += 1
 		if !light:
-			stepCount += 1
 			if stepCount >= 10:
 				fifthstep = true
 				stepCount = 0
