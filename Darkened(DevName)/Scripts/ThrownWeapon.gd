@@ -6,11 +6,12 @@ func _ready():
 
 func _on_lifespan_over():
 	$Flickerout.play("TurnOff")
+	GameEvents.emit_signal("light_down")
 
 func on_greedeer_active():
 	$Flickerout.play("TurnOff")
+	GameEvents.emit_signal("light_down")
 
 
 func _on_Flickerout_animation_finished(anim_name):
-	GameEvents.emit_signal("light_down")
 	queue_free()

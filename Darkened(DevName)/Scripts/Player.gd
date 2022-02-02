@@ -241,13 +241,13 @@ func _on_Footstepped():
 	#notify the ENTIRE GAME that the player has taken a step.
 	GameEvents.emit_signal("footstep", stepCount)
 
-func on_light_down():
+func on_light_down(): #Triggers when a light vanishes, one way or another
 	move = true
 
-func _in_level():
+func _in_level(): #triggers when the player-entering-level animation finishes
 	visible = true
 	move = true
 
-func _on_level_clear():
+func _on_level_clear(): #Triggers when the player reaches the end and the animation begins playing
 	visible = false
 	move = false

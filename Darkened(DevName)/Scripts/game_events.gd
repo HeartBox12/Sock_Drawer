@@ -9,4 +9,5 @@ signal level_clear()
 
 var currLevel = 0
 var levelList:PoolStringArray = ["res://Scenes/Rooms/TutRoom{1}.tscn",
-"res://Scenes/Rooms/GreedeerTut{2}.tscn"]
+"res://Scenes/Rooms/GreedeerTut{2}.tscn",
+"res://Scenes/Rooms/OpenLevel1.tscn"]
