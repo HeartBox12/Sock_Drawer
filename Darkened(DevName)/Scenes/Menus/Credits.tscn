@@ -4,11 +4,11 @@
 [ext_resource path="res://UI/MainTheme.tres" type="Theme" id=2]
 [ext_resource path="res://Fonts/CreditHeading.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Fonts/FlashForward.tres" type="DynamicFont" id=4]
-[ext_resource path="res://Fonts/dpcomic.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Fonts/dpcomicnoantialias.tres" type="DynamicFontData" id=5]
 [ext_resource path="res://Sounds/Creature_Steps.wav" type="AudioStream" id=6]
 
 [sub_resource type="DynamicFont" id=1]
-size = 90
+size = 89
 font_data = ExtResource( 5 )
 
 [node name="Credits" type="Control"]
@@ -23,6 +23,7 @@ wait_time = 3.0
 autostart = true
 
 [node name="BoxCredit" type="Label" parent="."]
+visible = false
 anchor_top = 0.066
 anchor_bottom = 0.066
 margin_top = 39.0
@@ -119,7 +120,6 @@ text = "Thornestarr"
 align = 1
 
 [node name="FontCredit" type="Label" parent="."]
-visible = false
 margin_left = 244.0
 margin_top = 58.0
 margin_right = 754.0
