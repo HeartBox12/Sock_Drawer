@@ -71,11 +71,11 @@ position = Vector2( 339, 532 )
 [node name="Greedeer2" parent="Navigation2D/YSort" instance=ExtResource( 4 )]
 position = Vector2( 132, 96 )
 
+[node name="DoorEntrance" parent="Navigation2D/YSort" instance=ExtResource( 9 )]
+position = Vector2( 64, 280 )
+
 [node name="Roomlight" parent="." instance=ExtResource( 6 )]
 position = Vector2( 512, 303 )
 
 [node name="DoorExit" parent="." instance=ExtResource( 8 )]
 position = Vector2( 937, 469 )
-
-[node name="DoorEntrance" parent="." instance=ExtResource( 9 )]
-position = Vector2( 47, 300 )
