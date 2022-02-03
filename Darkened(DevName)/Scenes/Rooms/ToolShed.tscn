@@ -1,0 +1,167 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Scripts/LoadMusic.gd" type="Script" id=1]
+[ext_resource path="res://Tilesets/TestTileset.tres" type="TileSet" id=2]
+[ext_resource path="res://Scenes/Instances/Roomlight.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sprites/TilesetAssets/CollideTileset.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Instances/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Sprites/ToolTable.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/LilKnob.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Hammer.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Saw.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/LightSwitch.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/DoorFront.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Gun.png" type="Texture" id=12]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "Collide.png 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[node name="TestScene" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="MakeEverythingDark" type="CanvasModulate" parent="."]
+visible = false
+position = Vector2( 363, 313 )
+scale = Vector2( 2, 2 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="TestTilesFunctional" type="TileMap" parent="YSort"]
+scale = Vector2( 2, 2 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+cell_tile_origin = 2
+cell_y_sort = true
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 3, 37, 0, 4, 38, 0, 5, 38, 0, 6, 38, 0, 7, 38, 0, 8, 38, 0, 9, 38, 0, 10, 5, 0, 65539, 8, 0, 65540, 9, 0, 65541, 9, 0, 65542, 9, 0, 65543, 9, 0, 65544, 9, 0, 65545, 9, 0, 65546, 8, 0, 131075, 8, 0, 131082, 8, 0, 196611, 8, 0, 196618, 8, 0, 262148, 38, 0, 262149, 38, 0, 262150, 38, 0, 262151, 38, 0, 262152, 38, 0, 262153, 38, 0, 262154, 14, 0, 327683, 11, 0, 327684, 9, 0, 327685, 9, 0, 327686, 9, 0, 327687, 9, 0, 327688, 9, 0, 327689, 9, 0, 327690, 10, 0 )
+
+[node name="TestTilesDecorative" type="TileMap" parent="YSort"]
+scale = Vector2( 2, 2 )
+z_index = -2
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 262147, 0, 0 )
+
+[node name="TilesCollision" type="TileMap" parent="YSort"]
+light_mask = 0
+scale = Vector2( 2, 2 )
+z_index = -3
+tile_set = SubResource( 2 )
+cell_size = Vector2( 32, 32 )
+collision_layer = 3
+collision_mask = 3
+format = 1
+
+[node name="Player" parent="YSort" instance=ExtResource( 5 )]
+visible = true
+position = Vector2( 516, 149 )
+
+[node name="ToolTable" type="Sprite" parent="YSort"]
+position = Vector2( 370, 248 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 6 )
+
+[node name="DoorFront" type="Sprite" parent="YSort"]
+position = Vector2( 546, 129 )
+scale = Vector2( 1.48437, 1.21875 )
+texture = ExtResource( 11 )
+offset = Vector2( 0, -30 )
+
+[node name="Gun" type="Sprite" parent="YSort"]
+position = Vector2( 483, 256 )
+rotation = -0.266165
+scale = Vector2( 2, 2 )
+texture = ExtResource( 12 )
+flip_h = true
+
+[node name="Saw2" type="Sprite" parent="YSort"]
+position = Vector2( 279, 216 )
+rotation = 0.987736
+scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+
+[node name="Gun2" type="Sprite" parent="YSort"]
+position = Vector2( 621, 239 )
+rotation = -1.47874
+scale = Vector2( 2, 2 )
+texture = ExtResource( 12 )
+
+[node name="Roomlight" parent="." instance=ExtResource( 3 )]
+
+[node name="Saw" type="Sprite" parent="."]
+position = Vector2( 306, 160 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+
+[node name="Hammer" type="Sprite" parent="."]
+position = Vector2( 317, 86 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 8 )
+
+[node name="LilKnob" type="Sprite" parent="."]
+position = Vector2( 310, 94 )
+texture = ExtResource( 7 )
+
+[node name="LightSwitch" type="Sprite" parent="."]
+position = Vector2( 598, 85 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 10 )
+hframes = 2
+frame = 1
+
+[node name="LilKnob2" type="Sprite" parent="."]
+position = Vector2( 367, 64 )
+texture = ExtResource( 7 )
+
+[node name="LilKnob3" type="Sprite" parent="."]
+position = Vector2( 413, 90 )
+texture = ExtResource( 7 )
+
+[node name="LilKnob4" type="Sprite" parent="."]
+position = Vector2( 461, 62 )
+texture = ExtResource( 7 )
+
+[node name="Hammer2" type="Sprite" parent="."]
+position = Vector2( 454, 54 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 8 )
+flip_h = true
+
+[node name="Hammer3" type="Sprite" parent="."]
+position = Vector2( 384, 128 )
+rotation = 1.98587
+scale = Vector2( 2, 2 )
+texture = ExtResource( 8 )
+
+[node name="Hammer4" type="Sprite" parent="."]
+position = Vector2( 424, 164 )
+rotation = -1.02996
+scale = Vector2( 2, 2 )
+texture = ExtResource( 8 )
