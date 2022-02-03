@@ -14,4 +14,4 @@ var levelList:PoolStringArray = ["res://Scenes/Rooms/TutRoom{1}.tscn",
 "res://Scenes/Rooms/OpenLevel1.tscn",
 "res://Scenes/Rooms/OpenLevel2.tscn",
 "res://Scenes/Rooms/OpenLevel3.tscn",
-"res://Scenes/Menus/Credits.tscn"]
+"res://Scenes/Rooms/ToolShed.tscn"]
