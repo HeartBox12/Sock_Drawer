@@ -14,6 +14,9 @@ config/name="Darkened (Name Not Final)"
 config/description="You are the last of humanity after the sun goes out.
 "
 run/main_scene="res://Scenes/Menus/LogoScreen.tscn"
+boot_splash/image="res://Sprites/CoverImage.png"
+boot_splash/use_filter=false
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://Sprites/DarkenedIcon.png"
 
 [autoload]
@@ -23,6 +26,7 @@ MusicController="*res://Scenes/Instances/MusicController.tscn"
 
 [display]
 
+window/size/resizable=false
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
 
