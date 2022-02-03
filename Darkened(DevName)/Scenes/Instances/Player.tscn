@@ -778,7 +778,7 @@ light_mask = 2
 position = Vector2( 0.5, -30 )
 texture = ExtResource( 3 )
 hframes = 6
-vframes = 20
+vframes = 21
 frame = 10
 
 [node name="KeepPlayerVisible" type="Light2D" parent="PlayerSprite"]
