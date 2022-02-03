@@ -10,3 +10,4 @@ func _ready():
 	$Logo/AnimationPlayer.play_backwards("Fade")
 	yield(get_tree().create_timer(2), "timeout")
 	get_tree().change_scene("res://Scenes/Menus/Menu.tscn")
+	GameEvents.currLevel = 0
